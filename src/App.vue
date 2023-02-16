@@ -1,30 +1,51 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <h1>RT Alexander</h1>
+    <!-- <a href="#about-me">About Me</a> -->
+    <!-- link to about me section -->
+    <!-- link to projects -->
+    <!-- link to contact form -->
   </nav>
+  <router-link to="/">Home</router-link>
   <router-view />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  background-color: white;
+  font-size: x-large;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: medium;
+  }
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
 }
 
 nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  border: 2px solid navy;
+  width: 100%;
+  height: 5em;
+  padding: 1em;
+  font-family: "Bungee Shade", cursive;
 }
 </style>

@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <AboutMe />
+    <ProjectsDisplay />
+    <ContactForm />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import AboutMe from "../components/AboutMe.vue";
+import ProjectsDisplay from "../components/ProjectsDisplay.vue";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    AboutMe,
+    ProjectsDisplay,
+    ContactForm,
   },
 };
 </script>
+
+<style>
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+</style>
