@@ -2,7 +2,7 @@
   <div class="about-me-container" id="about-me">
     <div class="photo-container">
       <img
-        src="../assets/PXL_20220618_205812841.PORTRAIT.png"
+        src="../assets/IMG_20200412_161025_2.png"
         alt="RT picture"
         class="about-me-pic"
       />
@@ -42,28 +42,28 @@ export default {
   align-items: center;
   border: solid 2px white;
   border-radius: 50%;
-  height: 10em;
-  width: 10em;
+  height: 8em;
+  width: 8em;
   background-color: white;
 }
 
 .about-me-pic {
   clip-path: circle(50%);
-  width: 9.5em;
-  height: 9.5em;
+  width: 7.5em;
+  height: 7.5em;
 }
 
 .about-me-text {
   position: relative;
   right: 35px;
   margin-right: 5px;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.298);
+  box-shadow: 25px 25px 0 -7px #cecece;
   border-radius: 0 0 0 0;
   width: 80%;
   max-height: 10em;
   padding: 1em 1em 1em 4em;
   font-size: x-large;
-  background-color: #3779b3;
+  background-color: #3b6895;
   color: white;
 }
 </style>

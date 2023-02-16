@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <AboutMe />
+    <div class="section-break"></div>
     <ProjectsDisplay />
+    <div class="section-break"></div>
     <ContactForm />
   </div>
 </template>
@@ -27,5 +29,9 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.section-break {
+  height: 3em;
 }
 </style>

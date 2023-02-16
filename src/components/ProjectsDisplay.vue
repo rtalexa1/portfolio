@@ -1,38 +1,86 @@
 <template>
   <div class="projects-container">
-    <h1 class="project-title">Math Exit Ticket</h1>
-    <div class="project">
-      <img
-        src="../assets/ExitTicketScreenshot1.jpg"
-        alt="Exit Ticket screenshot"
-        class="project-screenshot"
-      />
-      <p class="project-text">
-        This project was my first experience with creating separate apps for the
-        front and back ends. Although I had built several other projects in
-        Rails, this was a different challenge, as now I was using Rails
-        exclusively as an API for the front end.
-      </p>
-      <p class="project-text">
-        As for the front end, I decided to go with Vue because I like the way
-        components are laid out. This was my first time using a state management
-        library (Vuex), and it was actually much more intuitive than I expected.
-      </p>
-      <p class="project-text">
-        This project also marked my first attempt at using AWS. I had heard that
-        there was a learning curve with AWS, and that was certainly true in my
-        case, especially since the Amazon documentation is pretty dense. It took
-        a few days, but I was eventually able to achieve the functionality that
-        I set out for.
-      </p>
-      <figure>
-        <figcaption>Technologies Used</figcaption>
-        <ul>
-          <li>Vue.js</li>
-          <li>Ruby on Rails</li>
-          <li>Firebase Authentication</li>
-        </ul>
-      </figure>
+    <h1 class="projects-title">Projects</h1>
+    <h2 class="project-title" style="padding-left: 1em">Math Exit Ticket</h2>
+    <div class="snapshot-container">
+      <div class="project-snapshot">
+        <img
+          src="../assets/ExitTicketScreenshot1.jpg"
+          alt="Exit Ticket screenshot"
+          class="exit-ticket-screenshot"
+        />
+        <div class="synopsis-and-link">
+          <p class="project-synopsis">
+            This app allows teachers to quickly and easily create short
+            assessments, known as "exit tickets", and to save them as a PDF or
+            link to them in Google Classroom. Of course, anyone can make their
+            own assessment in a text editor, but this app provides actual
+            questions from the STAAR test (Texas's standardized test), rather
+            than requiring teachers to write their their own. I would have
+            gotten a lot of use out of this app had it existed while I was
+            teaching.
+          </p>
+          <div class="link-container">
+            <RouterLink to="met">Learn more about this project</RouterLink>
+            <p style="color: orangered">
+              Insert link icons to demo and github here
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="project-title" style="text-align: center">Math Visualizer</h2>
+    <div class="snapshot-container">
+      <div class="project-snapshot">
+        <div class="synopsis-and-link">
+          <p class="project-synopsis">
+            Visual aids can be incredibly helpful when learning something new,
+            especially something involving as many steps as long division. This
+            generates random long division problems, then walks the user through
+            the steps of solving the problem, with hints provided along the way.
+          </p>
+          <div class="link-container">
+            <RouterLink to="math_visualizer"
+              >Learn more about this project</RouterLink
+            >
+            <p style="color: orangered">
+              Insert link icons to demo and github here
+            </p>
+          </div>
+        </div>
+        <img
+          src="../assets/MathVisualizerScreenshot1.jpg"
+          alt="Math Visualizer screenshot"
+          class="math-viz-screenshot"
+        />
+      </div>
+    </div>
+    <h2 class="project-title" style="padding-left: 1em">
+      divyUp (in development)
+    </h2>
+    <div class="snapshot-container">
+      <div class="project-snapshot">
+        <img
+          src="../assets/divyUpScreenshot1.jpg"
+          alt="divyUp screenshot"
+          class="divy-up-screenshot"
+        />
+        <div class="synopsis-and-link">
+          <p class="project-synopsis">
+            With this app, friends can track expenses related to a group outing
+            or vacation and then calculate a fair split based on how much
+            everyone has contributed. This app makes things easier for the
+            mathematically challenged among us (points at self). While mostly
+            fleshed out, this app is still in development.
+          </p>
+          <div class="link-container">
+            <RouterLink to="divy_up">Learn more about this project</RouterLink>
+            <p style="color: orangered">
+              Insert link icons to demo and github here
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,30 +96,77 @@ export default {
   width: 90%;
 }
 
-.project {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 80%;
+.projects-title {
+  padding: 5px;
+  color: #3b6895;
 }
 
 .project-title {
   padding: 5px;
-  background-color: #3779b3;
+  background-color: #3b6895;
   color: white;
 }
 
-.project-text {
-  width: 90%;
-  padding: 0.5em;
-  background-color: #f9f9f9;
-  color: black;
+/* .container-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.snapshot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5em;
+  width: 40em;
 }
 
-.project-screenshot {
-  display: inline-block;
-  width: 18.27em;
+.project-snapshot {
+  display: flex;
+  justify-content: center;
+}
+
+.exit-ticket-screenshot {
+  width: 15em;
+  height: 19.98em;
+  padding: 1em;
+}
+
+.math-viz-screenshot {
+  width: 27.37em;
+  height: 15em;
+  padding: 1em;
+}
+
+.divy-up-screenshot {
+  width: 23.04em;
   height: 10em;
   padding: 1em;
+}
+
+.synopsis-and-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-synopsis {
+  margin: 1em 0.5em 0.5em 0.5em;
+  border-radius: 10px;
+  width: 30em;
+  height: 13em;
+  background-color: #cecece;
+  padding: 0.5em;
+  font-size: large;
+}
+
+.link-container {
+  margin: 0.5em;
+  border-radius: 10px;
+  background-color: #cecece;
+  padding: 0.5em;
+  text-align: center;
+  font-size: large;
 }
 </style>
