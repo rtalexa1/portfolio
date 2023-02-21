@@ -63,7 +63,8 @@ export default {
   max-height: 10em;
   padding: 1em 1em 1em 4em;
   font-size: x-large;
-  background-color: #3b6895;
+  /* background-color: #6cb4ee; */
+  background-color: #1b1212;
   color: white;
 }
 </style>

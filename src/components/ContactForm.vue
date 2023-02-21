@@ -14,6 +14,7 @@ div {
 }
 
 .contact-form {
+  margin-bottom: 1em;
   width: 90%;
 }
 </style>

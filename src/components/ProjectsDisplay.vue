@@ -1,7 +1,7 @@
 <template>
   <div class="projects-container">
     <h1 class="projects-title">Projects</h1>
-    <h2 class="project-title" style="padding-left: 1em">Math Exit Ticket</h2>
+    <h2 class="project-title">Math Exit Ticket</h2>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <img
@@ -19,17 +19,14 @@
             than requiring teachers to write their their own. I would have
             gotten a lot of use out of this app had it existed while I was
             teaching.
-          </p>
-          <div class="link-container">
             <RouterLink to="met">Learn more about this project</RouterLink>
-            <p style="color: orangered">
-              Insert link icons to demo and github here
-            </p>
-          </div>
+            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </p>
         </div>
       </div>
     </div>
-    <h2 class="project-title" style="text-align: center">Math Visualizer</h2>
+    <h2 class="project-title">Math Visualizer</h2>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <div class="synopsis-and-link">
@@ -39,14 +36,11 @@
             generates random long division problems, then walks the user through
             the steps of solving the problem, with hints provided along the way.
           </p>
-          <div class="link-container">
-            <RouterLink to="math_visualizer"
-              >Learn more about this project</RouterLink
-            >
-            <p style="color: orangered">
-              Insert link icons to demo and github here
-            </p>
-          </div>
+          <RouterLink to="math_visualizer"
+            >Learn more about this project</RouterLink
+          >
+          <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+          <font-awesome-icon icon="fa-brands fa-github" />
         </div>
         <img
           src="../assets/MathVisualizerScreenshot1.jpg"
@@ -55,9 +49,7 @@
         />
       </div>
     </div>
-    <h2 class="project-title" style="padding-left: 1em">
-      divyUp (in development)
-    </h2>
+    <h2 class="project-title">divyUp (in development)</h2>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <img
@@ -72,13 +64,10 @@
             everyone has contributed. This app makes things easier for the
             mathematically challenged among us (points at self). While mostly
             fleshed out, this app is still in development.
-          </p>
-          <div class="link-container">
             <RouterLink to="divy_up">Learn more about this project</RouterLink>
-            <p style="color: orangered">
-              Insert link icons to demo and github here
-            </p>
-          </div>
+            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </p>
         </div>
       </div>
     </div>
@@ -88,6 +77,27 @@
 <script>
 export default {
   name: "ProjectsDisplay",
+
+  data() {
+    return {
+      currentProject: "mathExitTicket",
+    };
+  },
+  methods: {
+    cycleProjects() {
+      switch (this.currentProject) {
+        case "mathExitTicket":
+          this.currentProject = "mathVisualizer";
+          break;
+        case "mathVisualizer":
+          this.currentProject = "divyUp";
+          break;
+        case "divyUp":
+          this.currentProject = "mathExitTicket";
+          break;
+      }
+    },
+  },
 };
 </script>
 
@@ -98,20 +108,16 @@ export default {
 
 .projects-title {
   padding: 5px;
-  color: #3b6895;
+  color: #1b1212;
 }
 
 .project-title {
+  border-radius: 10px;
   padding: 5px;
-  background-color: #3b6895;
+  padding-left: 15px;
+  background-color: #1b1212;
   color: white;
 }
-
-/* .container-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .snapshot-container {
   display: flex;
@@ -156,7 +162,7 @@ export default {
   border-radius: 10px;
   width: 30em;
   height: 13em;
-  background-color: #cecece;
+  background-color: #fedaec;
   padding: 0.5em;
   font-size: large;
 }
@@ -164,7 +170,7 @@ export default {
 .link-container {
   margin: 0.5em;
   border-radius: 10px;
-  background-color: #cecece;
+  background-color: #fedaec;
   padding: 0.5em;
   text-align: center;
   font-size: large;

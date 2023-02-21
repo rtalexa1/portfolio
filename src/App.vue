@@ -42,10 +42,10 @@ html {
 }
 
 nav {
-  border: 2px solid navy;
   width: 100%;
   height: 5em;
   padding: 1em;
   font-family: "Bungee Shade", cursive;
+  background-color: #ff69b4;
 }
 </style>
