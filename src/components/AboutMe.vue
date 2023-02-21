@@ -29,7 +29,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   height: 11em;
 }
 
