@@ -40,11 +40,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px white;
+  border: solid 2px #faf9f6;
   border-radius: 50%;
   height: 8em;
   width: 8em;
-  background-color: white;
+  background-color: #faf9f6;
 }
 
 .about-me-pic {
@@ -58,6 +58,7 @@ export default {
   right: 35px;
   margin-right: 5px;
   box-shadow: 25px 25px 0 -7px #cecece;
+  border: solid 2px #4f9292;
   border-radius: 0 10px 10px 0;
   width: 80%;
   max-height: 10em;

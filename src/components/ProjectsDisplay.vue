@@ -3,8 +3,16 @@
     <h1 class="projects-title">Projects</h1>
     <div class="project-title">
       <h2>Math Exit Ticket (MET)</h2>
-      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square fa-lg" />
-      <font-awesome-icon icon="fa-brands fa-square-github fa-10x" />
+      <font-awesome-icon
+        icon="fa-solid fa-link"
+        size="xl"
+        style="margin: 0 5px 0 20px; width: 36px; height: 36px"
+      />
+      <font-awesome-icon
+        icon="fa-brands fa-github"
+        size="xl"
+        style="margin: 0 0 0 5px"
+      />
     </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
@@ -35,8 +43,16 @@
     </div>
     <div class="project-title">
       <h2>Math Visualizer</h2>
-      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-      <font-awesome-icon icon="fa-brands fa-square-github" />
+      <font-awesome-icon
+        icon="fa-solid fa-link"
+        size="xl"
+        style="margin: 0 5px 0 20px"
+      />
+      <font-awesome-icon
+        icon="fa-brands fa-github"
+        size="xl"
+        style="margin: 0 0 0 5px"
+      />
     </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
@@ -64,8 +80,16 @@
     </div>
     <div class="project-title">
       <h2>divyUp (in development)</h2>
-      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-      <font-awesome-icon icon="fa-brands fa-square-github" />
+      <font-awesome-icon
+        icon="fa-solid fa-link"
+        size="xl"
+        style="margin: 0 5px 0 20px"
+      />
+      <font-awesome-icon
+        icon="fa-brands fa-github"
+        size="xl"
+        style="margin: 0 0 0 5px"
+      />
     </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
@@ -198,9 +222,5 @@ export default {
   padding: 0.5em;
   text-align: center;
   font-size: large;
-}
-
-svg {
-  color: white;
 }
 </style>

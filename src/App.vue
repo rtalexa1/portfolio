@@ -7,6 +7,18 @@
       <a href="about-me">About Me</a> | <a href="#projects">Projects</a> |
       <a href="contact-form">Contact</a>
     </div>
+    <div class="toggle-buttons">
+      <font-awesome-icon
+        icon="fa-solid fa-toggle-off"
+        size="xl"
+        style="color: #1b1212"
+      />
+      <font-awesome-icon
+        icon="fa-solid fa-toggle-on"
+        size="xl"
+        style="color: #faf9f6"
+      />
+    </div>
   </nav>
   <router-view />
 </template>
