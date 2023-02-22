@@ -8,8 +8,8 @@
       />
     </div>
     <p class="about-me-text">
-      Hi there! My name is RT, and I love to create intuitive, useful websites
-      that make things easier for users. I never considered that I could build
+      Hello! My name is RT, and I love to create intuitive, useful websites that
+      make things easier for users. I never considered that I could build
       software from scratch, but as a lifelong language learner, it has been a
       joy learning the languages of programming. I am constantly learning new
       things, and I am excited to put them to use!
@@ -58,13 +58,12 @@ export default {
   right: 35px;
   margin-right: 5px;
   box-shadow: 25px 25px 0 -7px #cecece;
-  border-radius: 0 0 0 0;
+  border-radius: 0 10px 10px 0;
   width: 80%;
   max-height: 10em;
   padding: 1em 1em 1em 4em;
   font-size: x-large;
-  /* background-color: #6cb4ee; */
-  background-color: #1b1212;
+  background-color: #63b7b7;
   color: white;
 }
 </style>

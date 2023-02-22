@@ -1,5 +1,7 @@
 <template>
-  <div class="contact-form">Contact form</div>
+  <div class="contact-form" id="contact-form">
+    <h2>Want to talk?</h2>
+  </div>
 </template>
 
 <script>
@@ -15,6 +17,12 @@ div {
 
 .contact-form {
   margin-bottom: 1em;
-  width: 90%;
+  box-shadow: 25px 25px 0 -7px #cecece;
+  border: solid 2px #4f9292;
+  border-radius: 10px;
+  width: 50%;
+  padding: 5px;
+  background: #63b7b7;
+  color: white;
 }
 </style>

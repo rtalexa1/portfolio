@@ -1,12 +1,13 @@
 <template>
   <nav>
     <h1>RT Alexander</h1>
-    <!-- <a href="#about-me">About Me</a> -->
-    <!-- link to about me section -->
-    <!-- link to projects -->
-    <!-- link to contact form -->
+    <div class="nav-links">
+      <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
+      <span v-if="$route.path !== '/'"> | </span>
+      <a href="about-me">About Me</a> | <a href="#projects">Projects</a> |
+      <a href="contact-form">Contact</a>
+    </div>
   </nav>
-  <router-link to="/">Home</router-link>
   <router-view />
 </template>
 
@@ -24,7 +25,7 @@
 
 body {
   min-height: 100%;
-  background-color: white;
+  background-color: #faf9f6;
   font-size: x-large;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
@@ -42,10 +43,19 @@ html {
 }
 
 nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   height: 5em;
   padding: 1em;
   font-family: "Bungee Shade", cursive;
-  background-color: #ff69b4;
+  background-color: #faf9f6;
+  color: #1b1212;
+}
+
+.nav-links {
+  margin-left: 3em;
+  font-family: "Roboto", sans-serif;
 }
 </style>

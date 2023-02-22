@@ -32,6 +32,6 @@ export default {
 }
 
 .section-break {
-  height: 3em;
+  height: 2em;
 }
 </style>

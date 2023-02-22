@@ -1,7 +1,11 @@
 <template>
   <div class="projects-container">
     <h1 class="projects-title">Projects</h1>
-    <h2 class="project-title">Math Exit Ticket</h2>
+    <div class="project-title">
+      <h2>Math Exit Ticket (MET)</h2>
+      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square fa-lg" />
+      <font-awesome-icon icon="fa-brands fa-square-github fa-10x" />
+    </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <img
@@ -10,37 +14,46 @@
           class="exit-ticket-screenshot"
         />
         <div class="synopsis-and-link">
-          <p class="project-synopsis">
-            This app allows teachers to quickly and easily create short
-            assessments, known as "exit tickets", and to save them as a PDF or
-            link to them in Google Classroom. Of course, anyone can make their
-            own assessment in a text editor, but this app provides actual
-            questions from the STAAR test (Texas's standardized test), rather
-            than requiring teachers to write their their own. I would have
-            gotten a lot of use out of this app had it existed while I was
-            teaching.
-            <RouterLink to="met">Learn more about this project</RouterLink>
-            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-            <font-awesome-icon icon="fa-brands fa-github" />
-          </p>
+          <div class="project-synopsis">
+            <p>
+              This app allows teachers to quickly and easily create short
+              assessments, known as "exit tickets", and to save them as a PDF or
+              link to them in Google Classroom. Of course, anyone can make their
+              own assessment in a text editor, but this app provides actual
+              questions from the STAAR test (Texas's standardized test), rather
+              than requiring teachers to write their their own. I would have
+              gotten a lot of use out of this app had it existed while I was
+              teaching.
+            </p>
+            <br />
+            <RouterLink to="met" class="learn-more-link"
+              >Learn more about this project</RouterLink
+            >
+          </div>
         </div>
       </div>
     </div>
-    <h2 class="project-title">Math Visualizer</h2>
+    <div class="project-title">
+      <h2>Math Visualizer</h2>
+      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+      <font-awesome-icon icon="fa-brands fa-square-github" />
+    </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <div class="synopsis-and-link">
-          <p class="project-synopsis">
-            Visual aids can be incredibly helpful when learning something new,
-            especially something involving as many steps as long division. This
-            generates random long division problems, then walks the user through
-            the steps of solving the problem, with hints provided along the way.
-          </p>
-          <RouterLink to="math_visualizer"
-            >Learn more about this project</RouterLink
-          >
-          <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-          <font-awesome-icon icon="fa-brands fa-github" />
+          <div class="project-synopsis">
+            <p>
+              Visual aids can be incredibly helpful when learning something new,
+              especially something involving as many steps as long division.
+              This generates random long division problems, then walks the user
+              through the steps of solving the problem, with hints provided
+              along the way.
+            </p>
+            <br />
+            <RouterLink to="math_visualizer"
+              >Learn more about this project</RouterLink
+            >
+          </div>
         </div>
         <img
           src="../assets/MathVisualizerScreenshot1.jpg"
@@ -49,7 +62,11 @@
         />
       </div>
     </div>
-    <h2 class="project-title">divyUp (in development)</h2>
+    <div class="project-title">
+      <h2>divyUp (in development)</h2>
+      <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+      <font-awesome-icon icon="fa-brands fa-square-github" />
+    </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <img
@@ -58,16 +75,17 @@
           class="divy-up-screenshot"
         />
         <div class="synopsis-and-link">
-          <p class="project-synopsis">
-            With this app, friends can track expenses related to a group outing
-            or vacation and then calculate a fair split based on how much
-            everyone has contributed. This app makes things easier for the
-            mathematically challenged among us (points at self). While mostly
-            fleshed out, this app is still in development.
+          <div class="project-synopsis">
+            <p>
+              With this app, friends can track expenses related to a group
+              outing or vacation and then calculate a fair split based on how
+              much everyone has contributed. This app makes things easier for
+              the mathematically challenged among us (points at self). While
+              mostly fleshed out, this app is still in development.
+            </p>
+            <br />
             <RouterLink to="divy_up">Learn more about this project</RouterLink>
-            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-            <font-awesome-icon icon="fa-brands fa-github" />
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -108,14 +126,17 @@ export default {
 
 .projects-title {
   padding: 5px;
-  color: #1b1212;
+  color: #63b7b7;
 }
 
 .project-title {
+  display: flex;
+  align-items: center;
+  border: solid 2px #4f9292;
   border-radius: 10px;
   padding: 5px;
   padding-left: 15px;
-  background-color: #1b1212;
+  background-color: #63b7b7;
   color: white;
 }
 
@@ -125,6 +146,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-left: 5em;
+  /* border: solid 2px #4f9292; */
   width: 40em;
 }
 
@@ -159,10 +181,12 @@ export default {
 
 .project-synopsis {
   margin: 1em 0.5em 0.5em 0.5em;
+  box-shadow: 25px 25px 0 -7px #cecece;
+  border: solid 2px #63b7b7;
   border-radius: 10px;
   width: 30em;
-  height: 13em;
-  background-color: #fedaec;
+  height: 17em;
+  background-color: #eff8f8;
   padding: 0.5em;
   font-size: large;
 }
@@ -170,9 +194,13 @@ export default {
 .link-container {
   margin: 0.5em;
   border-radius: 10px;
-  background-color: #fedaec;
+  background-color: #eff8f8;
   padding: 0.5em;
   text-align: center;
   font-size: large;
+}
+
+svg {
+  color: white;
 }
 </style>
