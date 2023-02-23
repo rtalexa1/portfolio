@@ -22,6 +22,7 @@
           src="../assets/images/met_screenshots/ExitTicketScreenshot3.jpg"
           alt="Exit Ticket screenshot"
           class="exit-ticket-screenshot"
+          id="exit-ticket-screenshot"
         />
         <div class="synopsis-and-link">
           <div class="project-synopsis">
@@ -52,7 +53,11 @@
           size="xl"
           style="margin: 0 5px 0 20px"
       /></a>
-      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+      <a
+        href="https://github.com/rtalexa1/math-visualizer"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
         ><font-awesome-icon
           icon="fa-brands fa-github"
           size="xl"
@@ -81,6 +86,7 @@
           src="../assets/images/math_visualizer_screenshots/MathVisualizerScreenshot3.jpg"
           alt="Math Visualizer screenshot"
           class="math-viz-screenshot"
+          id="math-viz-screenshot"
         />
       </div>
     </div>
@@ -112,6 +118,7 @@
           src="../assets/images/divy_up_screenshots/divyUpScreenshot6.jpg"
           alt="divyUp screenshot"
           class="divy-up-screenshot"
+          id="divy-up-screenshot"
         />
         <div class="synopsis-and-link">
           <div class="project-synopsis">
@@ -179,6 +186,7 @@ export default {
   padding-left: 15px;
   background-color: #63b7b7;
   color: white;
+  transition: background-color 500ms, color 500ms;
 }
 
 .icon-link {
@@ -211,16 +219,37 @@ export default {
   height: 400px;
 }
 
+.exit-ticket-screenshot-dark-theme {
+  filter: brightness(70%);
+  filter: grayscale(20%);
+  filter: drop-shadow(0 0 0.5em #4dc04d);
+  transition: filter 500ms;
+}
+
 .math-viz-screenshot {
   width: 350px;
   height: 450px;
   padding: 1em;
 }
 
+.math-viz-screenshot-dark-theme {
+  filter: brightness(70%);
+  filter: grayscale(20%);
+  filter: drop-shadow(0 0 0.5em #c185fd);
+  transition: filter 500ms;
+}
+
 .divy-up-screenshot {
   width: 678px;
   height: 325px;
   padding: 1em;
+}
+
+.divy-up-screenshot-dark-theme {
+  filter: brightness(70%);
+  filter: grayscale(20%);
+  filter: drop-shadow(0 0 0.5em #f8b400);
+  transition: filter 500ms;
 }
 
 .synopsis-and-link {
@@ -238,6 +267,7 @@ export default {
   background-color: #eff8f8;
   padding: 0.5em;
   font-size: large;
+  transition: background-color 500ms, color 500ms;
 }
 
 .math-viz-synopsis {
@@ -255,5 +285,6 @@ export default {
   border: solid 2px #376767;
   background-color: #4f9292;
   color: white;
+  transition: background-color 500ms, color 500ms;
 }
 </style>

@@ -40,11 +40,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px #eff8f8;
+  border: solid 2px #63b7b7;
   border-radius: 50%;
   height: 8em;
   width: 8em;
-  background-color: #eff8f8;
+  background-color: #63b7b7;
 }
 
 .about-me-pic {
@@ -65,6 +65,7 @@ export default {
   padding: 1em 1em 1em 4em;
   font-size: x-large;
   background-color: #eff8f8;
+  transition: border 500ms, background-color 500ms, color 500ms;
 }
 
 .text-dark-theme {
@@ -72,5 +73,7 @@ export default {
   border: solid 2px #376767;
   background-color: #4f9292;
   color: white;
+  filter: drop-shadow(0 0 4px #faf9f6);
+  transition: border 500ms, background-color 500ms, color 500ms, filter 500ms;
 }
 </style>

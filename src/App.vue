@@ -20,6 +20,7 @@ export default {
       this.activateAboutMeDarkTheme();
       this.activateProjectsDarkTheme();
       this.activateContactDarkTheme();
+      this.activateScreenshotsDarkTheme();
     },
     deactivateDarkTheme() {
       const body = document.getElementsByTagName("body")[0];
@@ -27,6 +28,7 @@ export default {
       this.deactivateAboutMeDarkTheme();
       this.deactivateProjectsDarkTheme();
       this.deactivateContactDarkTheme();
+      this.deactivateScreenshotsDarkTheme();
     },
     activateAboutMeDarkTheme() {
       const photoContainer = document.getElementById("photo-container");
@@ -47,6 +49,7 @@ export default {
     activateProjectsDarkTheme() {
       const title = document.getElementById("projects-title");
       title.style.color = "white";
+      title.style.filter = "(0 0 2px #faf9f6)";
 
       const titles = document.getElementsByClassName("project-title");
       for (let i = 0; i < titles.length; i++) {
@@ -80,6 +83,32 @@ export default {
       const contactForm = document.getElementById("contact-form");
       contactForm.classList.remove("text-dark-theme");
     },
+    activateScreenshotsDarkTheme() {
+      const exitTicketScreenshot = document.getElementById(
+        "exit-ticket-screenshot"
+      );
+      exitTicketScreenshot.classList.add("exit-ticket-screenshot-dark-theme");
+
+      const mathVizScreenshot = document.getElementById("math-viz-screenshot");
+      mathVizScreenshot.classList.add("math-viz-screenshot-dark-theme");
+
+      const divyUpScreenshot = document.getElementById("divy-up-screenshot");
+      divyUpScreenshot.classList.add("divy-up-screenshot-dark-theme");
+    },
+    deactivateScreenshotsDarkTheme() {
+      const exitTicketScreenshot = document.getElementById(
+        "exit-ticket-screenshot"
+      );
+      exitTicketScreenshot.classList.remove(
+        "exit-ticket-screenshot-dark-theme"
+      );
+
+      const mathVizScreenshot = document.getElementById("math-viz-screenshot");
+      mathVizScreenshot.classList.remove("math-viz-screenshot-dark-theme");
+
+      const divyUpScreenshot = document.getElementById("divy-up-screenshot");
+      divyUpScreenshot.classList.remove("divy-up-screenshot-dark-theme");
+    },
   },
 };
 </script>
@@ -103,6 +132,7 @@ body {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  transition: background-color 500ms;
 }
 
 @media (max-width: 768px) {

@@ -74,6 +74,7 @@ nav {
   font-family: "Bungee Shade", cursive;
   background-color: #faf9f6;
   color: #1b1212;
+  transition: background-color 500ms, color 500ms;
 }
 
 .name {
@@ -97,6 +98,7 @@ nav {
 .dark-theme {
   background-color: #1b1212;
   color: #faf9f6;
+  transition: background-color 500ms, color 500ms;
 }
 
 .fade-out {
