@@ -1,18 +1,18 @@
 <template>
   <div class="about-me-container" id="about-me">
-    <div class="photo-container">
+    <div class="photo-container" id="photo-container">
       <img
         src="../assets/IMG_20200412_161025_2.png"
         alt="RT picture"
         class="about-me-pic"
       />
     </div>
-    <p class="about-me-text">
-      Hello! My name is RT, and I love to create intuitive, useful websites that
-      make things easier for users. I never considered that I could build
-      software from scratch, but as a lifelong language learner, it has been a
-      joy learning the languages of programming. I am constantly learning new
-      things, and I am excited to put them to use!
+    <p class="about-me-text" id="about-me-text">
+      <strong>Hello!</strong> My name is RT, and I love to create intuitive,
+      useful websites that make things easier for users. I never considered that
+      I could build software from scratch, but as a lifelong language learner,
+      it has been a joy learning the languages of programming. I am constantly
+      learning new things, and I am excited to put them to use!
     </p>
   </div>
 </template>
@@ -65,6 +65,13 @@ export default {
   padding: 1em 1em 1em 4em;
   font-size: x-large;
   background-color: #63b7b7;
+  color: white;
+}
+
+.text-dark-theme {
+  box-shadow: 0 0 0 0;
+  border: solid 2px #376767;
+  background-color: #4f9292;
   color: white;
 }
 </style>

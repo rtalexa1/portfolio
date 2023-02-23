@@ -1,27 +1,88 @@
 <template>
-  <nav>
-    <h1>RT Alexander</h1>
-    <div class="nav-links">
-      <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
-      <span v-if="$route.path !== '/'"> | </span>
-      <a href="about-me">About Me</a> | <a href="#projects">Projects</a> |
-      <a href="contact-form">Contact</a>
-    </div>
-    <div class="toggle-buttons">
-      <font-awesome-icon
-        icon="fa-solid fa-toggle-off"
-        size="xl"
-        style="color: #1b1212"
-      />
-      <font-awesome-icon
-        icon="fa-solid fa-toggle-on"
-        size="xl"
-        style="color: #faf9f6"
-      />
-    </div>
-  </nav>
+  <NavBar
+    @activate-dark-theme="activateDarkTheme"
+    @deactivate-dark-theme="deactivateDarkTheme"
+  />
   <router-view />
 </template>
+
+<script>
+import NavBar from "./components/NavBar.vue";
+
+export default {
+  components: {
+    NavBar,
+  },
+  methods: {
+    activateDarkTheme() {
+      const body = document.getElementsByTagName("body")[0];
+      body.classList.add("dark-theme");
+      this.activateAboutMeDarkTheme();
+      this.activateProjectsDarkTheme();
+      this.activateContactDarkTheme();
+    },
+    deactivateDarkTheme() {
+      const body = document.getElementsByTagName("body")[0];
+      body.classList.remove("dark-theme");
+      this.deactivateAboutMeDarkTheme();
+      this.deactivateProjectsDarkTheme();
+      this.deactivateContactDarkTheme();
+    },
+    activateAboutMeDarkTheme() {
+      const photoContainer = document.getElementById("photo-container");
+      photoContainer.style.borderColor = "#376767";
+      photoContainer.style.backgroundColor = "#376767";
+
+      const aboutMeText = document.getElementById("about-me-text");
+      aboutMeText.classList.add("text-dark-theme");
+    },
+    deactivateAboutMeDarkTheme() {
+      const photoContainer = document.getElementById("photo-container");
+      photoContainer.style.borderColor = "#faf9f6";
+      photoContainer.style.backgroundColor = "#faf9f6";
+
+      const aboutMeText = document.getElementById("about-me-text");
+      aboutMeText.classList.remove("text-dark-theme");
+    },
+    activateProjectsDarkTheme() {
+      const title = document.getElementById("projects-title");
+      title.style.color = "white";
+
+      const titles = document.getElementsByClassName("project-title");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].classList.add("text-dark-theme");
+      }
+
+      const synopses = document.getElementsByClassName("project-synopsis");
+      for (let i = 0; i < synopses.length; i++) {
+        synopses[i].classList.add("text-dark-theme");
+      }
+    },
+    deactivateProjectsDarkTheme() {
+      const title = document.getElementById("projects-title");
+      title.style.color = "#63b7b7";
+
+      const titles = document.getElementsByClassName("project-title");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].classList.remove("text-dark-theme");
+      }
+
+      const synopses = document.getElementsByClassName("project-synopsis");
+      for (let i = 0; i < synopses.length; i++) {
+        synopses[i].classList.remove("text-dark-theme");
+      }
+    },
+    activateContactDarkTheme() {
+      const contactForm = document.getElementById("contact-form");
+      contactForm.classList.add("text-dark-theme");
+    },
+    deactivateContactDarkTheme() {
+      const contactForm = document.getElementById("contact-form");
+      contactForm.classList.remove("text-dark-theme");
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 *,
@@ -52,22 +113,5 @@ body {
 html {
   overflow-y: scroll;
   height: 100%;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 5em;
-  padding: 1em;
-  font-family: "Bungee Shade", cursive;
-  background-color: #faf9f6;
-  color: #1b1212;
-}
-
-.nav-links {
-  margin-left: 3em;
-  font-family: "Roboto", sans-serif;
 }
 </style>

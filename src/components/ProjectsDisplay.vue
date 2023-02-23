@@ -1,6 +1,6 @@
 <template>
   <div class="projects-container">
-    <h1 class="projects-title">Projects</h1>
+    <h1 class="projects-title" id="projects-title">Projects</h1>
     <div class="project-title">
       <h2>Math Exit Ticket (MET)</h2>
       <font-awesome-icon
@@ -213,6 +213,13 @@ export default {
   background-color: #eff8f8;
   padding: 0.5em;
   font-size: large;
+}
+
+.text-dark-theme {
+  box-shadow: 0 0 0 0;
+  border: solid 2px #376767;
+  background-color: #4f9292;
+  color: white;
 }
 
 .link-container {
