@@ -2,7 +2,7 @@
   <div class="about-me-container" id="about-me">
     <div class="photo-container" id="photo-container">
       <img
-        src="../assets/IMG_20200412_161025_2.png"
+        src="../assets/images/IMG_20200412_161025_2.png"
         alt="RT picture"
         class="about-me-pic"
       />
@@ -40,11 +40,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px #faf9f6;
+  border: solid 2px #eff8f8;
   border-radius: 50%;
   height: 8em;
   width: 8em;
-  background-color: #faf9f6;
+  background-color: #eff8f8;
 }
 
 .about-me-pic {

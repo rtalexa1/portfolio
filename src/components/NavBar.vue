@@ -1,30 +1,31 @@
 <template>
   <nav>
-    <h1>RT Alexander</h1>
-    <!-- <div class="nav-links">
-      <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
+    <h1 class="name">RT Alexander</h1>
+    <div class="nav-links">
+      <!-- <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
       <span v-if="$route.path !== '/'"> | </span>
       <a href="about-me">About Me</a> | <a href="#projects">Projects</a> |
-      <a href="contact-form">Contact</a>
-    </div> -->
+      <a href="contact-form">Contact</a> -->
+    </div>
     <div class="toggle-buttons">
-      Dark theme
-      <font-awesome-icon
-        v-if="theme === 'light'"
-        id="on-button"
-        icon="fa-solid fa-toggle-off"
-        size="xl"
-        style="color: #1b1212; cursor: pointer"
-        @click="toggleTheme"
-      />
-      <font-awesome-icon
-        v-else-if="theme === 'dark'"
-        id="off-button"
-        icon="fa-solid fa-toggle-on"
-        size="xl"
-        style="color: #faf9f6; cursor: pointer"
-        @click="toggleTheme"
-      />
+      <span v-if="theme === 'light'"
+        >Dark theme
+        <font-awesome-icon
+          id="on-button"
+          icon="fa-solid fa-toggle-off"
+          size="xl"
+          style="color: #1b1212; cursor: pointer"
+          @click="toggleTheme"
+      /></span>
+      <span v-else-if="theme === 'dark'"
+        >Light theme
+        <font-awesome-icon
+          id="off-button"
+          icon="fa-solid fa-toggle-on"
+          size="xl"
+          style="color: #faf9f6; cursor: pointer"
+          @click="toggleTheme"
+      /></span>
     </div>
   </nav>
 </template>
@@ -75,12 +76,21 @@ nav {
   color: #1b1212;
 }
 
+.name {
+  width: 40%;
+}
+
 .nav-links {
   margin-left: 3em;
+  width: 40%;
   font-family: "Roboto", sans-serif;
 }
 
 .toggle-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
   font-family: "Roboto", sans-serif;
 }
 

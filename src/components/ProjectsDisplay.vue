@@ -3,21 +3,23 @@
     <h1 class="projects-title" id="projects-title">Projects</h1>
     <div class="project-title">
       <h2>Math Exit Ticket (MET)</h2>
-      <font-awesome-icon
-        icon="fa-solid fa-link"
-        size="xl"
-        style="margin: 0 5px 0 20px; width: 36px; height: 36px"
-      />
-      <font-awesome-icon
-        icon="fa-brands fa-github"
-        size="xl"
-        style="margin: 0 0 0 5px"
-      />
+      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+        ><font-awesome-icon
+          icon="fa-solid fa-link"
+          size="xl"
+          style="margin: 0 5px 0 20px; width: 36px; height: 36px"
+      /></a>
+      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+        ><font-awesome-icon
+          icon="fa-brands fa-github"
+          size="xl"
+          style="margin: 0 0 0 5px"
+      /></a>
     </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <img
-          src="../assets/ExitTicketScreenshot1.jpg"
+          src="../assets/images/met_screenshots/ExitTicketScreenshot3.jpg"
           alt="Exit Ticket screenshot"
           class="exit-ticket-screenshot"
         />
@@ -44,21 +46,23 @@
     </div>
     <div class="project-title">
       <h2>Math Visualizer</h2>
-      <font-awesome-icon
-        icon="fa-solid fa-link"
-        size="xl"
-        style="margin: 0 5px 0 20px"
-      />
-      <font-awesome-icon
-        icon="fa-brands fa-github"
-        size="xl"
-        style="margin: 0 0 0 5px"
-      />
+      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+        ><font-awesome-icon
+          icon="fa-solid fa-link"
+          size="xl"
+          style="margin: 0 5px 0 20px"
+      /></a>
+      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+        ><font-awesome-icon
+          icon="fa-brands fa-github"
+          size="xl"
+          style="margin: 0 0 0 5px"
+      /></a>
     </div>
     <div class="snapshot-container">
       <div class="project-snapshot">
         <div class="synopsis-and-link">
-          <div class="project-synopsis">
+          <div class="project-synopsis math-viz-synopsis">
             <p>
               Visual aids can be incredibly helpful when learning something new,
               especially something involving as many steps as long division.
@@ -74,7 +78,7 @@
           </div>
         </div>
         <img
-          src="../assets/MathVisualizerScreenshot1.jpg"
+          src="../assets/images/math_visualizer_screenshots/MathVisualizerScreenshot3.jpg"
           alt="Math Visualizer screenshot"
           class="math-viz-screenshot"
         />
@@ -82,21 +86,30 @@
     </div>
     <div class="project-title">
       <h2>divyUp (in development)</h2>
-      <font-awesome-icon
-        icon="fa-solid fa-link"
-        size="xl"
-        style="margin: 0 5px 0 20px"
-      />
-      <font-awesome-icon
-        icon="fa-brands fa-github"
-        size="xl"
-        style="margin: 0 0 0 5px"
-      />
+      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+        ><font-awesome-icon
+          icon="fa-solid fa-link"
+          size="xl"
+          style="margin: 0 5px 0 20px"
+      /></a>
+
+      <a
+        href="https://github.com/rtalexa1/divyUp"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+      >
+        <font-awesome-icon
+          icon="fa-brands fa-github"
+          size="xl"
+          style="margin: 0 0 0 5px"
+        />
+      </a>
     </div>
     <div class="snapshot-container">
-      <div class="project-snapshot">
+      <div class="project-snapshot divy-up-snapshot">
         <img
-          src="../assets/divyUpScreenshot1.jpg"
+          src="../assets/images/divy_up_screenshots/divyUpScreenshot6.jpg"
           alt="divyUp screenshot"
           class="divy-up-screenshot"
         />
@@ -155,7 +168,6 @@ export default {
 
 .projects-title {
   padding: 5px;
-  color: #63b7b7;
 }
 
 .project-title {
@@ -169,12 +181,16 @@ export default {
   color: white;
 }
 
+.icon-link {
+  color: #faf9f6;
+}
+
 .snapshot-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 5em;
+  margin: auto;
   /* border: solid 2px #4f9292; */
   width: 40em;
 }
@@ -184,21 +200,26 @@ export default {
   justify-content: center;
 }
 
+.divy-up-snapshot {
+  flex-direction: column;
+  align-items: center;
+}
+
 .exit-ticket-screenshot {
-  width: 15em;
-  height: 19.98em;
-  padding: 1em;
+  margin: 1em 2em;
+  width: 376px;
+  height: 400px;
 }
 
 .math-viz-screenshot {
-  width: 27.37em;
-  height: 15em;
+  width: 350px;
+  height: 450px;
   padding: 1em;
 }
 
 .divy-up-screenshot {
-  width: 23.04em;
-  height: 10em;
+  width: 678px;
+  height: 325px;
   padding: 1em;
 }
 
@@ -219,6 +240,10 @@ export default {
   font-size: large;
 }
 
+.math-viz-synopsis {
+  box-shadow: -25px 25px 0 -7px #cecece;
+}
+
 .project-link {
   text-decoration: none;
   font-weight: 500;
@@ -230,14 +255,5 @@ export default {
   border: solid 2px #376767;
   background-color: #4f9292;
   color: white;
-}
-
-.link-container {
-  margin: 0.5em;
-  border-radius: 10px;
-  background-color: #eff8f8;
-  padding: 0.5em;
-  text-align: center;
-  font-size: large;
 }
 </style>
