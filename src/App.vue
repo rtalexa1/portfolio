@@ -4,6 +4,10 @@
     @deactivate-dark-theme="deactivateDarkTheme"
   />
   <router-view />
+  <footer>
+    <span>Copyright 2023 RT Alexander</span> |
+    <span>Contact: rtalexa1@gmail.com</span>
+  </footer>
 </template>
 
 <script>
@@ -36,6 +40,7 @@ export default {
       const photoContainer = document.getElementById("photo-container");
       photoContainer.style.borderColor = "#376767";
       photoContainer.style.backgroundColor = "#376767";
+      photoContainer.style.filter = "drop-shadow(0 0 4px #faf9f6)";
 
       const aboutMeText = document.getElementById("about-me-text");
       aboutMeText.classList.add("text-dark-theme");
@@ -51,7 +56,7 @@ export default {
     activateProjectsDarkTheme() {
       const title = document.getElementById("projects-title");
       title.style.color = "white";
-      title.style.filter = "(0 0 2px #faf9f6)";
+      title.style.filter = "drop-shadow(0 0 2px #faf9f6)";
 
       const titles = document.getElementsByClassName("project-title");
       for (let i = 0; i < titles.length; i++) {
@@ -160,5 +165,22 @@ h1,
 h2,
 h3 {
   font-weight: 300;
+}
+
+footer {
+  padding: 2px 10px;
+  background: #f9f9f9;
+  font-size: medium;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: medium;
+  }
+
+  footer {
+    font-size: small;
+  }
 }
 </style>
