@@ -58,14 +58,13 @@ export default {
   right: 35px;
   margin-right: 5px;
   box-shadow: 25px 25px 0 -7px #cecece;
-  border: solid 2px #4f9292;
-  border-radius: 0 10px 10px 0;
+  border: solid 2px #63b7b7;
+  border-radius: 10px;
   width: 80%;
   max-height: 10em;
   padding: 1em 1em 1em 4em;
   font-size: x-large;
-  background-color: #63b7b7;
-  color: white;
+  background-color: #eff8f8;
 }
 
 .text-dark-theme {

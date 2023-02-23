@@ -1,39 +1,57 @@
 <template>
   <div class="contact-form" id="contact-form">
-    <h2 style="text-align: center">Want to talk?</h2>
-    <form @submit.prevent="onSubmit">
-      <label for="name">Name</label>
-      <br />
-      <input v-model="name" type="text" />
-      <br />
-      <label for="email">Email</label>
-      <br />
-      <input v-model="email" type="text" />
-      <br />
-      <label for="message">Write a message</label>
-      <br />
-      <textarea v-model="message" id="message">What's on your mind?</textarea>
-      <br />
-      <div class="btn-container">
-        <button type="submit" class="submit-btn">Submit</button>
-      </div>
-    </form>
+    <div v-if="showForm">
+      <h2 style="text-align: center">Want to talk?</h2>
+      <form ref="form" @submit.prevent="onSubmit">
+        <label for="name">Name</label>
+        <br />
+        <input type="text" name="user_name" id="name" />
+        <br />
+        <label for="email">Email</label>
+        <br />
+        <input type="email" name="user_email" id="email" />
+        <br />
+        <label for="message">Write a message</label>
+        <br />
+        <textarea name="message" id="message"></textarea>
+        <br />
+        <div class="btn-container">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div v-else class="sent-message">
+      <h3>Message Sent</h3>
+      <p>Thanks for reaching out! I will get back to you as soon as I can.</p>
+    </div>
   </div>
 </template>
 
 <script>
+import emailjs from "@emailjs/browser";
+
 export default {
   name: "ContactForm",
   data() {
     return {
-      name: "",
-      email: "",
-      message: "",
+      showForm: true,
     };
   },
   methods: {
     onSubmit() {
-      console.log(this.name + this.email + this.message);
+      emailjs
+        .sendForm(
+          "service_wxyk1e4",
+          "contact-form",
+          this.$refs.form,
+          "8JalONMpcU2JQEZB3"
+        )
+        .then(
+          // eslint-disable-next-line no-unused-vars
+          (_result) => {
+            this.showForm = false;
+          }
+        );
     },
   },
 };
@@ -78,6 +96,10 @@ textarea {
   background: #faf9f6;
   font-size: large;
   font-family: inherit;
+}
+
+.sent-message {
+  padding: 5px;
 }
 
 .text-dark-theme {

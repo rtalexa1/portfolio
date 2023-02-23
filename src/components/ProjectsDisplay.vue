@@ -34,9 +34,10 @@
               teaching.
             </p>
             <br />
-            <RouterLink to="met" class="learn-more-link"
-              >Learn more about this project</RouterLink
-            >
+            <RouterLink to="met" class="project-link"
+              >Learn more about this project
+              <font-awesome-icon icon="fa-solid fa-angles-right"
+            /></RouterLink>
           </div>
         </div>
       </div>
@@ -66,9 +67,10 @@
               along the way.
             </p>
             <br />
-            <RouterLink to="math_visualizer"
-              >Learn more about this project</RouterLink
-            >
+            <RouterLink to="math_visualizer" class="project-link"
+              >Learn more about this project
+              <font-awesome-icon icon="fa-solid fa-angles-right"
+            /></RouterLink>
           </div>
         </div>
         <img
@@ -108,7 +110,10 @@
               mostly fleshed out, this app is still in development.
             </p>
             <br />
-            <RouterLink to="divy_up">Learn more about this project</RouterLink>
+            <RouterLink to="divy_up" class="project-link"
+              >Learn more about this project
+              <font-awesome-icon icon="fa-solid fa-angles-right"
+            /></RouterLink>
           </div>
         </div>
       </div>
@@ -209,10 +214,15 @@ export default {
   border: solid 2px #63b7b7;
   border-radius: 10px;
   width: 30em;
-  height: 17em;
   background-color: #eff8f8;
   padding: 0.5em;
   font-size: large;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
 }
 
 .text-dark-theme {

@@ -102,6 +102,7 @@ body {
   font-size: x-large;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
@@ -113,5 +114,11 @@ body {
 html {
   overflow-y: scroll;
   height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
 }
 </style>

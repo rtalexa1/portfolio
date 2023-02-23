@@ -7,10 +7,11 @@ import {
   faToggleOff,
   faToggleOn,
   faLink,
+  faAnglesRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faToggleOff, faToggleOn, faLink, faGithub);
+library.add(faToggleOff, faToggleOn, faLink, faAnglesRight, faGithub);
 
 createApp(App)
   .use(router)
