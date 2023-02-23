@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h1 class="name">RT Alexander</h1>
+    <h1 class="name" id="name-display">RT Alexander</h1>
     <div class="nav-links">
       <!-- <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
       <span v-if="$route.path !== '/'"> | </span>
@@ -17,10 +17,13 @@
           style="color: #1b1212; cursor: pointer"
           @click="toggleTheme"
       /></span>
-      <span v-else-if="theme === 'dark'"
+      <span
+        v-else-if="theme === 'dark'"
+        style="filter: drop-shadow(0 0 5px #faf9f6)"
         >Light theme
         <font-awesome-icon
           id="off-button"
+          class="off-button"
           icon="fa-solid fa-toggle-on"
           size="xl"
           style="color: #faf9f6; cursor: pointer"
@@ -50,11 +53,15 @@ export default {
     // const offButton = document.getElementById("off-button");
     if (this.theme === "dark") {
       navBar.classList.add("dark-theme");
+      const name = document.getElementById("name-display");
+      name.classList.add("name-dark-theme");
       this.$emit("activateDarkTheme");
       // onButton.classList.add("fade-out");
       // offButton.classList.add("fade-in");
     } else {
       navBar.classList.remove("dark-theme");
+      const name = document.getElementById("name-display");
+      name.classList.remove("name-dark-theme");
       this.$emit("deactivateDarkTheme");
       // onButton.classList.add("fade-in");
       // offButton.classList.add("fade-out");
@@ -81,6 +88,28 @@ nav {
   width: 40%;
 }
 
+.name-dark-theme {
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #faf9f6,
+      0 0 80px #faf9f6, 0 0 90px #faf9f6, 0 0 100px #faf9f6, 0 0 150px #faf9f6;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
 .nav-links {
   margin-left: 3em;
   width: 40%;
@@ -93,6 +122,10 @@ nav {
   align-items: center;
   width: 20%;
   font-family: "Roboto", sans-serif;
+}
+
+.off-button {
+  filter: drop-shadow(0 0 2px #faf9f6);
 }
 
 .dark-theme {

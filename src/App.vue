@@ -4,7 +4,7 @@
     @deactivate-dark-theme="deactivateDarkTheme"
   />
   <router-view />
-  <footer>
+  <footer id="footer">
     <span>Copyright 2023 RT Alexander</span> |
     <span>Contact: rtalexa1@gmail.com</span>
   </footer>
@@ -25,6 +25,7 @@ export default {
       this.activateProjectsDarkTheme();
       this.activateContactDarkTheme();
       this.activateScreenshotsDarkTheme();
+      this.activateFooterDarkTheme();
       localStorage.setItem("theme", "dark");
     },
     deactivateDarkTheme() {
@@ -34,13 +35,13 @@ export default {
       this.deactivateProjectsDarkTheme();
       this.deactivateContactDarkTheme();
       this.deactivateScreenshotsDarkTheme();
+      this.deactivateFooterDarkTheme();
       localStorage.setItem("theme", "light");
     },
     activateAboutMeDarkTheme() {
       const photoContainer = document.getElementById("photo-container");
       photoContainer.style.borderColor = "#376767";
       photoContainer.style.backgroundColor = "#376767";
-      photoContainer.style.filter = "drop-shadow(0 0 4px #faf9f6)";
 
       const aboutMeText = document.getElementById("about-me-text");
       aboutMeText.classList.add("text-dark-theme");
@@ -61,6 +62,7 @@ export default {
       const titles = document.getElementsByClassName("project-title");
       for (let i = 0; i < titles.length; i++) {
         titles[i].classList.add("text-dark-theme");
+        titles[i].innerText.style.filter = "drop-shadow(0 0 2px #faf9f6)";
       }
 
       const synopses = document.getElementsByClassName("project-synopsis");
@@ -84,11 +86,11 @@ export default {
     },
     activateContactDarkTheme() {
       const contactForm = document.getElementById("contact-form");
-      contactForm.classList.add("text-dark-theme");
+      contactForm.classList.add("contact-form-dark-theme");
     },
     deactivateContactDarkTheme() {
       const contactForm = document.getElementById("contact-form");
-      contactForm.classList.remove("text-dark-theme");
+      contactForm.classList.remove("contact-form-dark-theme");
     },
     activateScreenshotsDarkTheme() {
       const exitTicketScreenshot = document.getElementById(
@@ -115,6 +117,16 @@ export default {
 
       const divyUpScreenshot = document.getElementById("divy-up-screenshot");
       divyUpScreenshot.classList.remove("divy-up-screenshot-dark-theme");
+    },
+    activateFooterDarkTheme() {
+      const footer = document.getElementById("footer");
+      footer.style.background = "#1b1212";
+      footer.style.color = "#faf9f6";
+    },
+    deactivateFooterDarkTheme() {
+      const footer = document.getElementById("footer");
+      footer.style.background = "#faf9f6";
+      footer.style.color = "#1b1212";
     },
   },
   updated() {
@@ -169,7 +181,7 @@ h3 {
 
 footer {
   padding: 2px 10px;
-  background: #f9f9f9;
+  background: #faf9f6;
   font-size: medium;
   text-align: center;
 }

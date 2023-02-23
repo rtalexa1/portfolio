@@ -69,11 +69,11 @@ export default {
 }
 
 .text-dark-theme {
+  transition: background-color 500ms, color 500ms;
   box-shadow: 0 0 0 0;
-  border: solid 2px #376767;
-  background-color: #4f9292;
+  /* border: solid 2px #376767; */
+  background-color: #1b1212;
+  text-shadow: 0 0 1px #faf9f6;
   color: white;
-  filter: drop-shadow(0 0 4px #faf9f6);
-  transition: border 500ms, background-color 500ms, color 500ms, filter 500ms;
 }
 </style>

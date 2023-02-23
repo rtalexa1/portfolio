@@ -222,7 +222,7 @@ export default {
 .exit-ticket-screenshot-dark-theme {
   filter: brightness(70%);
   filter: grayscale(20%);
-  filter: drop-shadow(0 0 0.5em #4dc04d);
+  filter: drop-shadow(0 0 1em #4dc04d);
   transition: filter 500ms;
 }
 
@@ -235,7 +235,7 @@ export default {
 .math-viz-screenshot-dark-theme {
   filter: brightness(70%);
   filter: grayscale(20%);
-  filter: drop-shadow(0 0 0.5em #c185fd);
+  filter: drop-shadow(0 0 1em #c185fd);
   transition: filter 500ms;
 }
 
@@ -248,7 +248,7 @@ export default {
 .divy-up-screenshot-dark-theme {
   filter: brightness(70%);
   filter: grayscale(20%);
-  filter: drop-shadow(0 0 0.5em #f8b400);
+  filter: drop-shadow(0 0 1em #f8b400);
   transition: filter 500ms;
 }
 
@@ -281,10 +281,12 @@ export default {
 }
 
 .text-dark-theme {
-  box-shadow: 0 0 0 0;
-  border: solid 2px #376767;
-  background-color: #4f9292;
-  color: white;
   transition: background-color 500ms, color 500ms;
+  box-shadow: 0 0 0 0;
+  /* border: none; */
+  border: solid 2px #376767;
+  background-color: #1b1212;
+  text-shadow: 0 0 1px #faf9f6;
+  color: white;
 }
 </style>

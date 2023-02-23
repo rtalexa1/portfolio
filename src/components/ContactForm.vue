@@ -116,10 +116,13 @@ textarea {
   padding: 5px;
 }
 
-.text-dark-theme {
+.contact-form-dark-theme {
+  transition: background-color 500ms, color 500ms;
   box-shadow: 0 0 0 0;
-  border: solid 2px #376767;
-  background-color: #4f9292;
+  border-top: solid 2px #376767;
+  border-bottom: solid 2px #376767;
+  background-color: #1b1212;
+  text-shadow: 0 0 1px #faf9f6;
   color: white;
 }
 </style>
