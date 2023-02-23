@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form" id="contact-form">
-    <div v-if="showForm">
-      <h2 style="text-align: center">Want to talk?</h2>
+    <div v-if="showForm" class="form-container">
+      <h2 style="text-align: center">Get in touch</h2>
       <form ref="form" @submit.prevent="onSubmit">
         <label for="name">Name</label>
         <br />
@@ -59,14 +59,28 @@ export default {
 
 <style scoped>
 .contact-form {
-  margin-bottom: 1em;
-  box-shadow: 25px 25px 0 -7px #cecece;
-  border: solid 2px #4f9292;
-  border-radius: 10px;
-  width: 30%;
-  padding: 5px;
+  /* margin-bottom: 1em; */
+  /* box-shadow: 25px 25px 0 -7px #cecece; */
+  display: flex;
+  justify-content: center;
+  border-top: solid 2px #4f9292;
+  /* border-radius: 10px; */
+  width: 100%;
+  padding: 5px 5px 1em 5px;
   background: #63b7b7;
   color: white;
+}
+
+.form-container {
+  width: 25%;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+label {
+  font-size: large;
 }
 
 input,
@@ -75,7 +89,7 @@ textarea {
   border-radius: 5px;
   width: 100%;
   height: 2em;
-  font-size: large;
+  font-size: medium;
   font-family: inherit;
 }
 
@@ -94,7 +108,7 @@ textarea {
   width: 50%;
   height: 2em;
   background: #faf9f6;
-  font-size: large;
+  font-size: medium;
   font-family: inherit;
 }
 

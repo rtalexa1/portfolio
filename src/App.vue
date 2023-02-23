@@ -21,6 +21,7 @@ export default {
       this.activateProjectsDarkTheme();
       this.activateContactDarkTheme();
       this.activateScreenshotsDarkTheme();
+      localStorage.setItem("theme", "dark");
     },
     deactivateDarkTheme() {
       const body = document.getElementsByTagName("body")[0];
@@ -29,6 +30,7 @@ export default {
       this.deactivateProjectsDarkTheme();
       this.deactivateContactDarkTheme();
       this.deactivateScreenshotsDarkTheme();
+      localStorage.setItem("theme", "light");
     },
     activateAboutMeDarkTheme() {
       const photoContainer = document.getElementById("photo-container");
@@ -40,8 +42,8 @@ export default {
     },
     deactivateAboutMeDarkTheme() {
       const photoContainer = document.getElementById("photo-container");
-      photoContainer.style.borderColor = "#faf9f6";
-      photoContainer.style.backgroundColor = "#faf9f6";
+      photoContainer.style.borderColor = "#63b7b7";
+      photoContainer.style.backgroundColor = "#63b7b7";
 
       const aboutMeText = document.getElementById("about-me-text");
       aboutMeText.classList.remove("text-dark-theme");
@@ -109,6 +111,14 @@ export default {
       const divyUpScreenshot = document.getElementById("divy-up-screenshot");
       divyUpScreenshot.classList.remove("divy-up-screenshot-dark-theme");
     },
+  },
+  updated() {
+    if (localStorage.theme === undefined) {
+      localStorage.setItem("theme", "light");
+      this.deactivateDarkTheme();
+    } else if (localStorage.theme === "dark") {
+      this.activateDarkTheme();
+    }
   },
 };
 </script>
