@@ -62,7 +62,8 @@ export default {
       const titles = document.getElementsByClassName("project-title");
       for (let i = 0; i < titles.length; i++) {
         titles[i].classList.add("text-dark-theme");
-        titles[i].innerText.style.filter = "drop-shadow(0 0 2px #faf9f6)";
+        // To-do: Add text shadow to h2's
+        // titles[i].innerText.style.filter = "drop-shadow(0 0 2px #faf9f6)";
       }
 
       const synopses = document.getElementsByClassName("project-synopsis");
