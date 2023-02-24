@@ -1,6 +1,12 @@
 <template>
-  <nav>
-    <h1 class="name" id="name-display">RT Alexander</h1>
+  <nav id="nav" :class="{ 'nav-dark-theme': $store.state.darkThemeActive }">
+    <h1
+      class="name"
+      :class="{ 'name-dark-theme': $store.state.darkThemeActive }"
+      id="name-display"
+    >
+      RT Alexander
+    </h1>
     <div class="nav-links">
       <!-- <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
       <span v-if="$route.path !== '/'"> | </span>
@@ -8,17 +14,17 @@
       <a href="contact-form">Contact</a> -->
     </div>
     <div class="toggle-buttons">
-      <span v-if="theme === 'light'"
+      <span v-if="!$store.state.darkThemeActive"
         >Dark theme
         <font-awesome-icon
           id="on-button"
           icon="fa-solid fa-toggle-off"
           size="xl"
           style="color: #1b1212; cursor: pointer"
-          @click="toggleTheme"
+          @click="$store.commit('toggleTheme')"
       /></span>
       <span
-        v-else-if="theme === 'dark'"
+        v-else-if="$store.state.darkThemeActive"
         style="filter: drop-shadow(0 0 5px #faf9f6)"
         >Light theme
         <font-awesome-icon
@@ -27,7 +33,7 @@
           icon="fa-solid fa-toggle-on"
           size="xl"
           style="color: #faf9f6; cursor: pointer"
-          @click="toggleTheme"
+          @click="$store.commit('toggleTheme')"
       /></span>
     </div>
   </nav>
@@ -36,37 +42,6 @@
 <script>
 export default {
   name: "NavBar",
-  data() {
-    return {
-      theme: "light",
-    };
-  },
-  emits: ["activateDarkTheme", "deactivateDarkTheme"],
-  methods: {
-    toggleTheme() {
-      this.theme === "light" ? (this.theme = "dark") : (this.theme = "light");
-    },
-  },
-  updated() {
-    const navBar = document.getElementsByTagName("nav")[0];
-    // const onButton = document.getElementById("on-button");
-    // const offButton = document.getElementById("off-button");
-    if (this.theme === "dark") {
-      navBar.classList.add("dark-theme");
-      const name = document.getElementById("name-display");
-      name.classList.add("name-dark-theme");
-      this.$emit("activateDarkTheme");
-      // onButton.classList.add("fade-out");
-      // offButton.classList.add("fade-in");
-    } else {
-      navBar.classList.remove("dark-theme");
-      const name = document.getElementById("name-display");
-      name.classList.remove("name-dark-theme");
-      this.$emit("deactivateDarkTheme");
-      // onButton.classList.add("fade-in");
-      // offButton.classList.add("fade-out");
-    }
-  },
 };
 </script>
 
@@ -81,6 +56,12 @@ nav {
   font-family: "Bungee Shade", cursive;
   background-color: #faf9f6;
   color: #1b1212;
+  transition: background-color 500ms, color 500ms;
+}
+
+.nav-dark-theme {
+  background-color: #1b1212;
+  color: #faf9f6;
   transition: background-color 500ms, color 500ms;
 }
 
@@ -126,12 +107,6 @@ nav {
 
 .off-button {
   filter: drop-shadow(0 0 2px #faf9f6);
-}
-
-.dark-theme {
-  background-color: #1b1212;
-  color: #faf9f6;
-  transition: background-color 500ms, color 500ms;
 }
 
 .fade-out {
