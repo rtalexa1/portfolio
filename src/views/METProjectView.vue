@@ -1,34 +1,78 @@
 <template>
+  <h1 style="background-color: #faf9f6">Math Exit Ticket</h1>
   <div class="project">
-    <h1>Math Exit Ticket</h1>
-    <p class="project-text">
-      This project was my first experience creating separate apps for the front
-      and back ends. Although I had built several other projects in Rails, this
-      was a different challenge, as now I was using Rails exclusively as an API
-      for the front end.
-    </p>
-    <p class="project-text">
-      As for the front end, I decided to go with Vue because I like the way
-      components are laid out. This was my first time using a state management
-      library (Vuex), and it was actually much more intuitive than I expected.
-    </p>
-    <p class="project-text">
-      This project also marked my first attempt at using Amazon Web Services
-      (AWS). I had heard that there was a learning curve with AWS, and that was
-      certainly true in my case, especially since the Amazon documentation is
-      pretty dense. It took a few days, but I was eventually able to achieve the
-      functionality that I set out for.
-    </p>
-    <figure>
-      <figcaption>Technologies Used</figcaption>
-      <!-- Add icons (?) -->
-      <ul>
-        <li>Vue.js</li>
-        <li>Vuex</li>
-        <li>Ruby on Rails</li>
-        <li>Firebase Authentication</li>
-      </ul>
-    </figure>
+    <img
+      src="../assets/images/met_screenshots/ExitTicketScreenshot1.jpg"
+      alt="screenshot of math questions"
+      class="met-screenshot"
+    />
+    <div class="project-text">
+      <p>
+        This was my first experience with creating separate front and back ends
+        for an app, and I learned a lot in the process. For the back end, I went
+        with Rails. Although I had used Rails several times before to build
+        full-stack apps, this was my first time using it exclusively as an API.
+      </p>
+      <br />
+      <p>
+        As for the front end, I decided to go with Vue because of its simple and
+        intuitive nature. I like, for example, the way components are laid out
+        in the options API, with the HTML, JavaScript, and CSS all in one place.
+        This was my first time using a state management library (Vuex), and it
+        was actually much less complex than I expected (in a good way).
+      </p>
+      <br />
+      <p>
+        This project also marked my first attempt at using Amazon Web Services
+        (AWS). I had heard that there was a learning curve with AWS, and that
+        was certainly true in my case, especially since the Amazon documentation
+        is pretty dense. It took a few days, but I was eventually able to
+        achieve the functionality that I set out for.
+      </p>
+      <br />
+      <figure>
+        <figcaption>Technologies Used</figcaption>
+        <!-- Add icons (?) -->
+        <ul>
+          <li>
+            <span
+              ><img
+                src="../assets/images/icons/vuejs.png"
+                alt="Vue.js icon"
+                class="tech-icon"
+            /></span>
+            Vue.js
+          </li>
+          <li>
+            <span
+              ><img
+                src="../assets/images/icons/vuejs.png"
+                alt="Vue.js icon"
+                class="tech-icon"
+            /></span>
+            Vuex
+          </li>
+          <li>
+            <span
+              ><img
+                src="../assets/images/icons/rubyonrails.png"
+                alt="Ruby on Rails icon"
+                class="tech-icon"
+            /></span>
+            Ruby on Rails
+          </li>
+          <li>
+            <span
+              ><img
+                src="../assets/images/icons/firebase.png"
+                alt="Firebase icon"
+                class="tech-icon"
+            /></span>
+            Firebase Authentication
+          </li>
+        </ul>
+      </figure>
+    </div>
   </div>
 </template>
 
@@ -41,15 +85,31 @@ export default {
 <style>
 .project {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
+  background-color: #faf9f6;
+}
+
+.met-screenshot {
+  width: 350px;
+  height: 532px;
 }
 
 .project-text {
-  width: 90%;
+  width: 60%;
   padding: 0.5em;
-  background-color: #f9f9f9;
+  background-color: #eff8f8;
   color: black;
+}
+
+li {
+  margin-left: 1.5em;
+}
+
+.tech-icon {
+  width: 20px;
+  height: 20px;
 }
 </style>

@@ -10,9 +10,9 @@ import {
   faLink,
   faAnglesRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faVuejs } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faToggleOff, faToggleOn, faLink, faAnglesRight, faGithub);
+library.add(faToggleOff, faToggleOn, faLink, faAnglesRight, faGithub, faVuejs);
 
 createApp(App)
   .use(store)
