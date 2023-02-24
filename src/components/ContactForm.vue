@@ -1,5 +1,9 @@
 <template>
-  <div class="contact-form" id="contact-form">
+  <div
+    class="contact-form"
+    :class="{ 'contact-form-dark-theme': $store.state.darkThemeActive }"
+    id="contact-form"
+  >
     <div v-if="showForm" class="form-container">
       <h2 style="text-align: center">Get in touch</h2>
       <form ref="form" @submit.prevent="onSubmit">
