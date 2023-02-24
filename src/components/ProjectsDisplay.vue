@@ -54,14 +54,15 @@
             :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
           >
             <p>
-              This app allows teachers to quickly and easily create short
-              assessments, known as "exit tickets", and to save them as a PDF or
-              link to them in Google Classroom. Of course, anyone can make their
-              own assessment in a text editor, but this app provides actual
-              questions from the STAAR test (Texas's standardized test), rather
-              than requiring teachers to write their their own. I would have
-              gotten a lot of use out of this app had it existed while I was
-              teaching.
+              Much like software developers test their programs to make sure
+              they are working as expected, it is crucial for teachers to be
+              able to assess their students' learning to make sure that they are
+              mastering academic standards. I created this app to make it
+              quicker and easier for teachers to make simple assessments (known
+              as "exit tickets") that they can use with their students. Once
+              created, these exit tickets can be saved as a PDF or linked to a
+              teacher's Google Classroom. I wish something like this existed
+              when I was working in the classroom!
             </p>
             <br />
             <RouterLink to="met" class="project-link"
@@ -112,8 +113,8 @@
             <p>
               Visual aids can be incredibly helpful when learning something new,
               especially something involving as many steps as long division.
-              This generates random long division problems, then walks the user
-              through the steps of solving the problem, with hints provided
+              This app randomly generates long division problems, then walks the
+              user through each of solving the problem, with hints provided
               along the way.
             </p>
             <br />

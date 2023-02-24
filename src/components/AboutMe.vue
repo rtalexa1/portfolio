@@ -17,10 +17,10 @@
       id="about-me-text"
     >
       <strong>Hello!</strong> My name is RT, and I love to create intuitive,
-      useful websites that make things easier for users. I never considered that
-      I could build software from scratch, but as a lifelong language learner,
-      it has been a joy learning the languages of programming. I am constantly
-      learning new things, and I am excited to put them to use!
+      useful websites that make things easier for users. I am not only an avid
+      learner, but also a teacher, and my ultimate goal is hone my craft to the
+      point where I can serve as a mentor to aspiring web developers. Thank you
+      for taking the time to check out my work!
     </p>
   </div>
 </template>
