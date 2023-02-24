@@ -155,12 +155,10 @@ export default {
 
 body {
   min-height: 100%;
-  background-color: #faf9f6;
   font-size: x-large;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  transition: background-color 500ms;
 }
 
 @media (max-width: 768px) {

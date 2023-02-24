@@ -1,5 +1,8 @@
 <template>
-  <div class="home">
+  <div
+    class="home"
+    :class="{ 'home-dark-theme': $store.state.darkThemeActive }"
+  >
     <AboutMe />
     <div class="section-break"></div>
     <ProjectsDisplay />
@@ -29,6 +32,12 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transition: background-color 500ms;
+  background-color: #faf9f6;
+}
+
+.home-dark-theme {
+  background-color: #1b1212;
 }
 
 .section-break {
