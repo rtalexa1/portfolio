@@ -85,11 +85,11 @@ export default {
 }
 
 .text-dark-theme {
-  transition: background-color 500ms, color 500ms;
-  box-shadow: 0 0 0 0;
+  transition: background-color 500ms, color 500ms !important;
+  box-shadow: 0 0 0 0 !important;
   /* border: solid 2px #376767; */
-  background-color: #1b1212;
-  text-shadow: 0 0 1px #faf9f6;
-  color: white;
+  background-color: #1b1212 !important;
+  text-shadow: 0 0 1px #faf9f6 !important;
+  color: #faf9f6 !important;
 }
 </style>

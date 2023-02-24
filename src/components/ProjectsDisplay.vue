@@ -1,15 +1,36 @@
 <template>
   <div class="projects-container">
-    <h1 class="projects-title" id="projects-title">Projects</h1>
-    <div class="project-title">
-      <h2>Math Exit Ticket (MET)</h2>
-      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+    <h1
+      class="projects-title"
+      :class="{ 'projects-title-dark-theme': $store.state.darkThemeActive }"
+      id="projects-title"
+    >
+      Projects
+    </h1>
+    <div
+      class="project-title"
+      :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+    >
+      <h2 :class="{ 'title-dark-theme': $store.state.darkThemeActive }">
+        Math Exit Ticket (MET)
+      </h2>
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
         ><font-awesome-icon
           icon="fa-solid fa-link"
           size="xl"
           style="margin: 0 5px 0 20px; width: 36px; height: 36px"
       /></a>
-      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
         ><font-awesome-icon
           icon="fa-brands fa-github"
           size="xl"
@@ -22,10 +43,16 @@
           src="../assets/images/met_screenshots/ExitTicketScreenshot3.jpg"
           alt="Exit Ticket screenshot"
           class="exit-ticket-screenshot"
+          :class="{
+            'exit-ticket-screenshot-dark-theme': $store.state.darkThemeActive,
+          }"
           id="exit-ticket-screenshot"
         />
         <div class="synopsis-and-link">
-          <div class="project-synopsis">
+          <div
+            class="project-synopsis"
+            :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+          >
             <p>
               This app allows teachers to quickly and easily create short
               assessments, known as "exit tickets", and to save them as a PDF or
@@ -45,9 +72,19 @@
         </div>
       </div>
     </div>
-    <div class="project-title">
-      <h2>Math Visualizer</h2>
-      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+    <div
+      class="project-title"
+      :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+    >
+      <h2 :class="{ 'title-dark-theme': $store.state.darkThemeActive }">
+        Math Visualizer
+      </h2>
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
         ><font-awesome-icon
           icon="fa-solid fa-link"
           size="xl"
@@ -58,6 +95,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
         ><font-awesome-icon
           icon="fa-brands fa-github"
           size="xl"
@@ -67,7 +105,10 @@
     <div class="snapshot-container">
       <div class="project-snapshot">
         <div class="synopsis-and-link">
-          <div class="project-synopsis math-viz-synopsis">
+          <div
+            class="project-synopsis math-viz-synopsis"
+            :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+          >
             <p>
               Visual aids can be incredibly helpful when learning something new,
               especially something involving as many steps as long division.
@@ -86,13 +127,26 @@
           src="../assets/images/math_visualizer_screenshots/MathVisualizerScreenshot3.jpg"
           alt="Math Visualizer screenshot"
           class="math-viz-screenshot"
+          :class="{
+            'math-viz-screenshot-dark-theme': $store.state.darkThemeActive,
+          }"
           id="math-viz-screenshot"
         />
       </div>
     </div>
-    <div class="project-title">
-      <h2>divyUp (in development)</h2>
-      <a href="" target="_blank" rel="noopener noreferrer" class="icon-link"
+    <div
+      class="project-title"
+      :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+    >
+      <h2 :class="{ 'title-dark-theme': $store.state.darkThemeActive }">
+        divyUp (in development)
+      </h2>
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
         ><font-awesome-icon
           icon="fa-solid fa-link"
           size="xl"
@@ -104,6 +158,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
       >
         <font-awesome-icon
           icon="fa-brands fa-github"
@@ -118,10 +173,16 @@
           src="../assets/images/divy_up_screenshots/divyUpScreenshot6.jpg"
           alt="divyUp screenshot"
           class="divy-up-screenshot"
+          :class="{
+            'divy-up-screenshot-dark-theme': $store.state.darkThemeActive,
+          }"
           id="divy-up-screenshot"
         />
         <div class="synopsis-and-link">
-          <div class="project-synopsis">
+          <div
+            class="project-synopsis"
+            :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+          >
             <p>
               With this app, friends can track expenses related to a group
               outing or vacation and then calculate a fair split based on how
@@ -177,6 +238,11 @@ export default {
   padding: 5px;
 }
 
+.projects-title-dark-theme {
+  color: #faf9f6;
+  filter: drop-shadow(0 0 2px #faf9f6);
+}
+
 .project-title {
   display: flex;
   align-items: center;
@@ -185,12 +251,20 @@ export default {
   padding: 5px;
   padding-left: 15px;
   background-color: #63b7b7;
-  color: white;
+  color: #faf9f6;
   transition: background-color 500ms, color 500ms;
+}
+
+.title-dark-theme {
+  filter: drop-shadow(0 0 2px #faf9f6);
 }
 
 .icon-link {
   color: #faf9f6;
+}
+
+.icon-link-dark-theme {
+  filter: drop-shadow(0 0 2px #faf9f6);
 }
 
 .snapshot-container {
@@ -280,13 +354,13 @@ export default {
   color: inherit;
 }
 
-.text-dark-theme {
+/* .text-dark-theme {
   transition: background-color 500ms, color 500ms;
   box-shadow: 0 0 0 0;
-  /* border: none; */
+  border: none;
   border: solid 2px #376767;
   background-color: #1b1212;
   text-shadow: 0 0 1px #faf9f6;
   color: white;
-}
+} */
 </style>
