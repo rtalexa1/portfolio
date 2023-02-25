@@ -15,7 +15,7 @@
         Math Exit Ticket (MET)
       </h2>
       <a
-        href=""
+        href="https://math-exit-ticket.vercel.app/#/"
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
@@ -24,6 +24,17 @@
           icon="fa-solid fa-link"
           size="xl"
           style="margin: 0 5px 0 20px; width: 36px; height: 36px"
+      /></a>
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="icon-link"
+        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
+        ><font-awesome-icon
+          icon="fa-brands fa-github"
+          size="xl"
+          style="margin: 0 0 0 5px"
       /></a>
       <a
         href=""
@@ -81,7 +92,7 @@
         Math Visualizer
       </h2>
       <a
-        href=""
+        href="https://math-visualizer.vercel.app/#/"
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
@@ -143,18 +154,6 @@
         divyUp (in development)
       </h2>
       <a
-        href=""
-        target="_blank"
-        rel="noopener noreferrer"
-        class="icon-link"
-        :class="{ 'icon-link-dark-theme': $store.state.darkThemeActive }"
-        ><font-awesome-icon
-          icon="fa-solid fa-link"
-          size="xl"
-          style="margin: 0 5px 0 20px"
-      /></a>
-
-      <a
         href="https://github.com/rtalexa1/divyUp"
         target="_blank"
         rel="noopener noreferrer"
@@ -164,7 +163,7 @@
         <font-awesome-icon
           icon="fa-brands fa-github"
           size="xl"
-          style="margin: 0 0 0 5px"
+          style="margin: 0 5px 0 20px"
         />
       </a>
     </div>
