@@ -76,6 +76,11 @@ export default {
 </script>
 
 <style>
+.back-link-dark-theme a {
+  color: #faf9f6;
+  transition: color 500ms;
+}
+
 .column-display {
   flex-direction: column;
   align-items: center;

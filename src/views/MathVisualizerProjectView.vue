@@ -82,6 +82,12 @@ export default {
 </script>
 
 <style>
+.back-link-dark-theme a {
+  background-color: #1b1212;
+  color: #faf9f6;
+  transition: color 500ms;
+}
+
 .mv-screenshot {
   margin-top: 15px;
   margin-bottom: 15px;
