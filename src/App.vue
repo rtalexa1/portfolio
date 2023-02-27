@@ -53,7 +53,7 @@ body {
   font-weight: 300;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   body {
     font-size: medium;
   }
@@ -82,7 +82,7 @@ footer {
   color: #faf9f6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   body {
     font-size: medium;
   }

@@ -172,7 +172,7 @@ li {
   height: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .project {
     flex-direction: column;
   }

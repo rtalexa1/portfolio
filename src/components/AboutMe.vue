@@ -11,17 +11,19 @@
         class="about-me-pic"
       />
     </div>
-    <p
+    <div
       class="about-me-text"
       :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
       id="about-me-text"
     >
-      <strong>Hello!</strong> My name is RT, and I love to create intuitive,
-      useful websites that make things easier for users. I am not only an avid
-      learner, but also a teacher, and my ultimate goal is hone my craft to the
-      point that I can serve as a mentor to aspiring web developers. Thank you
-      for taking the time to check out my work!
-    </p>
+      <p>
+        <strong>Hello!</strong> My name is RT, and I love to create intuitive,
+        useful websites that make things easier for users. I am not only an avid
+        learner, but also a teacher, and my ultimate goal is hone my craft to
+        the point that I can serve as a mentor to aspiring web developers. Thank
+        you for taking the time to check out my work!
+      </p>
+    </div>
   </div>
 </template>
 
@@ -93,16 +95,16 @@ export default {
   color: #faf9f6 !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-me-container {
     flex-direction: column;
-    width: 100%;
+    margin-top: 3em;
     min-height: 25em;
   }
 
   .photo-container {
     position: static;
-    margin: 5em;
+    margin: -2em;
   }
 
   .about-me-text {

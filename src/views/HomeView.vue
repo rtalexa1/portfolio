@@ -44,7 +44,7 @@ export default {
   height: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .section-break {
     height: 4em;
   }

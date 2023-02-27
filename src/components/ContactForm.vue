@@ -130,7 +130,7 @@ textarea {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .form-container {
     width: 70%;
   }

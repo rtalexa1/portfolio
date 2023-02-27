@@ -100,7 +100,7 @@ export default {
   width: 60%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .mv-screenshot {
     width: 85%;
     height: 47%;

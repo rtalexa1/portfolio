@@ -90,7 +90,7 @@ export default {
   filter: drop-shadow(0 0 1em #f8b400);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .divy-screenshot {
     margin: 10px;
     width: 85%;

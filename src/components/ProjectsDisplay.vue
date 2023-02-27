@@ -381,7 +381,7 @@ export default {
   color: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .projects-container {
     display: flex;
     flex-direction: column;
