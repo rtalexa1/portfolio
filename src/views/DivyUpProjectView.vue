@@ -1,6 +1,22 @@
 <template>
-  <h1 style="background-color: #faf9f6">divyUp</h1>
-  <div class="project">
+  <h1
+    class="project-view-title"
+    :class="{ 'project-view-title-dark-theme': $store.state.darkThemeActive }"
+  >
+    divyUp
+  </h1>
+  <div
+    class="project column-display"
+    :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+  >
+    <img
+      src="../assets/images/divy_up_screenshots/divyUpScreenshot2.jpg"
+      alt="screenshot of web form"
+      class="divy-screenshot"
+      :class="{
+        'divy-screenshot-dark-theme': $store.state.darkThemeActive,
+      }"
+    />
     <div class="project-text">
       <p>
         This was the first full stack application that I made on my own. I was
@@ -10,12 +26,14 @@
         ready to divy up, the app can calculate how much money each group member
         owes or is owed.
       </p>
+      <br />
       <p>
         I chose Rails for this project because it was the only framework I had
         learned at the time. That said, I really enjoy the intuitiveness of
         Ruby, and all of Rails conventions make it a great tool with which to
         experiment.
       </p>
+      <br />
       <p>
         From a technical standpoint, my top goal with this project was to get my
         feet wet with the basics of HTML and CSS. I learned a lot from this
@@ -23,6 +41,7 @@
         trepidatious, I discovered that I enjoy frontend work a lot more than I
         thought I would.
       </p>
+      <br />
       <figure>
         <figcaption>Technologies Used</figcaption>
         <ul>
@@ -47,4 +66,21 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.column-display {
+  flex-direction: column;
+  align-items: center;
+}
+
+.divy-screenshot {
+  margin-bottom: 10px;
+  width: 620px;
+  height: 325px;
+}
+
+.divy-screenshot-dark-theme {
+  filter: brightness(70%);
+  filter: grayscale(20%);
+  filter: drop-shadow(0 0 1em #f8b400);
+}
+</style>

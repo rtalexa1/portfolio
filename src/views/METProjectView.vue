@@ -14,7 +14,7 @@
       alt="screenshot of math questions"
       class="met-screenshot"
       :class="{
-        'exit-ticket-screenshot-dark-theme': $store.state.darkThemeActive,
+        'met-screenshot-dark-theme': $store.state.darkThemeActive,
       }"
     />
     <div class="project-text">
@@ -118,14 +118,16 @@ export default {
   transition: background-color 500ms, color 500ms;
 }
 
-/* .project-dark-theme {
-  background-color: ;
-} */
-
 .met-screenshot {
   margin-right: 4em;
   width: 350px;
   height: 456px;
+}
+
+.met-screenshot-dark-theme {
+  filter: brightness(70%);
+  filter: grayscale(20%);
+  filter: drop-shadow(0 0 1em #4dc04d);
 }
 
 .project-text {

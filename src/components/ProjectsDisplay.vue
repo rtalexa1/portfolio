@@ -297,7 +297,16 @@ export default {
   filter: brightness(70%);
   filter: grayscale(20%);
   filter: drop-shadow(0 0 1em #4dc04d);
-  transition: filter 500ms;
+  transition: filter 500ms, width 300ms, height 300ms;
+}
+
+.exit-ticket-screenshot-dark-theme:hover {
+  filter: brightness(90%);
+  filter: grayscale(10%);
+  filter: drop-shadow(0 0 2em #4dc04d);
+  width: 396px;
+  height: 421px;
+  transition: filter 300ms, width 300ms, height 300ms;
 }
 
 .math-viz-screenshot {
@@ -310,7 +319,16 @@ export default {
   filter: brightness(70%);
   filter: grayscale(20%);
   filter: drop-shadow(0 0 1em #c185fd);
-  transition: filter 500ms;
+  transition: filter 500ms, width 300ms, height 300ms;
+}
+
+.math-viz-screenshot-dark-theme:hover {
+  filter: brightness(90%);
+  filter: grayscale(10%);
+  filter: drop-shadow(0 0 2em #c185fd);
+  width: 370px;
+  height: 476px;
+  transition: filter 300ms, width 300ms, height 300ms;
 }
 
 .divy-up-screenshot {
@@ -323,7 +341,16 @@ export default {
   filter: brightness(70%);
   filter: grayscale(20%);
   filter: drop-shadow(0 0 1em #f8b400);
-  transition: filter 500ms;
+  transition: filter 500ms, width 300ms, height 300ms;
+}
+
+.divy-up-screenshot-dark-theme:hover {
+  filter: brightness(90%);
+  filter: grayscale(10%);
+  filter: drop-shadow(0 0 2em #f8b400);
+  width: 720px;
+  height: 345px;
+  transition: filter 300ms, width 300ms, height 300ms;
 }
 
 .synopsis-and-link {
