@@ -5,7 +5,10 @@
   >
     divyUp
   </h1>
-  <div class="back-link">
+  <div
+    class="back-link"
+    :class="{ 'back-link-dark-theme': $store.state.darkThemeActive }"
+  >
     <RouterLink to="/" class="back-link">Back</RouterLink>
   </div>
   <div
