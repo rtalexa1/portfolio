@@ -1,10 +1,21 @@
 <template>
-  <h1 style="background-color: #faf9f6">Math Exit Ticket</h1>
-  <div class="project">
+  <h1
+    class="project-view-title"
+    :class="{ 'project-view-title-dark-theme': $store.state.darkThemeActive }"
+  >
+    Math Exit Ticket
+  </h1>
+  <div
+    class="project"
+    :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
+  >
     <img
       src="../assets/images/met_screenshots/ExitTicketScreenshot1.jpg"
       alt="screenshot of math questions"
       class="met-screenshot"
+      :class="{
+        'exit-ticket-screenshot-dark-theme': $store.state.darkThemeActive,
+      }"
     />
     <div class="project-text">
       <p>
@@ -83,25 +94,44 @@ export default {
 </script>
 
 <style>
+.project-view-title {
+  background-color: #faf9f6;
+  padding: 0.5em;
+  transition: background-color 500ms, color 500ms;
+}
+
+.project-view-title-dark-theme {
+  border: none;
+  background-color: #1b1212;
+  color: #faf9f6;
+  transition: background-color 500ms, color 500ms;
+}
+
 .project {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  padding-bottom: 2em;
   background-color: #faf9f6;
+  transition: background-color 500ms, color 500ms;
 }
 
+/* .project-dark-theme {
+  background-color: ;
+} */
+
 .met-screenshot {
+  margin-right: 4em;
   width: 350px;
-  height: 532px;
+  height: 456px;
 }
 
 .project-text {
-  width: 60%;
+  width: 40%;
   padding: 0.5em;
-  background-color: #eff8f8;
-  color: black;
+  font-size: large;
 }
 
 li {

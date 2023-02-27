@@ -3,7 +3,6 @@
     <h1
       class="name"
       :class="{ 'name-dark-theme': $store.state.darkThemeActive }"
-      id="name-display"
     >
       RT Alexander
     </h1>
@@ -66,7 +65,7 @@ nav {
 }
 
 .name {
-  width: 40%;
+  width: 50%;
 }
 
 .name-dark-theme {
@@ -93,7 +92,7 @@ nav {
 
 .nav-links {
   margin-left: 3em;
-  width: 40%;
+  width: 30%;
   font-family: "Roboto", sans-serif;
 }
 

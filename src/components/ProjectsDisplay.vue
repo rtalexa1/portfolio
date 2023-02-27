@@ -26,7 +26,7 @@
           style="margin: 0 5px 0 20px; width: 36px; height: 36px"
       /></a>
       <a
-        href=""
+        href="https://github.com/rtalexa1/exit-ticket-frontend"
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
@@ -37,7 +37,7 @@
           style="margin: 0 0 0 5px"
       /></a>
       <a
-        href=""
+        href="https://github.com/rtalexa1/exit-ticket-api"
         target="_blank"
         rel="noopener noreferrer"
         class="icon-link"
