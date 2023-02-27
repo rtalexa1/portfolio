@@ -6,12 +6,7 @@
     >
       RT Alexander
     </h1>
-    <div class="nav-links">
-      <!-- <router-link to="/" v-if="$route.path !== '/'">Home</router-link>
-      <span v-if="$route.path !== '/'"> | </span>
-      <a href="about-me">About Me</a> | <a href="#projects">Projects</a> |
-      <a href="contact-form">Contact</a> -->
-    </div>
+    <div class="placeholder"></div>
     <div class="toggle-buttons">
       <span v-if="!$store.state.darkThemeActive"
         >Dark theme
@@ -90,10 +85,9 @@ nav {
   }
 }
 
-.nav-links {
+.placeholder {
   margin-left: 3em;
   width: 30%;
-  font-family: "Roboto", sans-serif;
 }
 
 .toggle-buttons {
