@@ -129,4 +129,10 @@ textarea {
   text-shadow: 0 0 1px #faf9f6;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 70%;
+  }
+}
 </style>

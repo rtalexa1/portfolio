@@ -6,6 +6,12 @@
     Math Exit Ticket
   </h1>
   <div
+    class="back-link"
+    :class="{ 'back-link-dark-theme': $store.state.darkThemeActive }"
+  >
+    <RouterLink to="/">Back</RouterLink>
+  </div>
+  <div
     class="project"
     :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
   >
@@ -90,13 +96,16 @@
 <script>
 export default {
   name: "METProjectView",
+  created() {
+    scroll(0, 0);
+  },
 };
 </script>
 
 <style>
 .project-view-title {
   background-color: #faf9f6;
-  padding: 0.5em;
+  padding: 10px 0 0 10px;
   transition: background-color 500ms, color 500ms;
 }
 
@@ -105,6 +114,24 @@ export default {
   background-color: #1b1212;
   color: #faf9f6;
   transition: background-color 500ms, color 500ms;
+}
+
+.back-link {
+  width: 100%;
+  padding: 0 0 10px 10px;
+  background-color: #faf9f6;
+  transition: background-color 500ms, color 500ms;
+}
+
+.back-link-dark-theme {
+  background-color: #1b1212;
+  color: #faf9f6;
+  transition: background-color 500ms, color 500ms;
+}
+
+.back-link-dark-theme a {
+  color: #faf9f6;
+  transition: color 500ms;
 }
 
 .project {
@@ -143,5 +170,21 @@ li {
 .tech-icon {
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .met-screenshot {
+    margin: 10px;
+    width: 85%;
+    height: 111%;
+  }
+
+  .project-text {
+    width: 85%;
+  }
 }
 </style>

@@ -95,8 +95,14 @@ export default {
 
 @media (max-width: 768px) {
   .about-me-container {
+    flex-direction: column;
     width: 100%;
     min-height: 25em;
+  }
+
+  .photo-container {
+    position: static;
+    margin: 5em;
   }
 
   .about-me-text {

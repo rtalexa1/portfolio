@@ -5,6 +5,9 @@
   >
     Math Visualizer
   </h1>
+  <div class="back-link">
+    <RouterLink to="/" class="back-link">Back</RouterLink>
+  </div>
   <div
     class="project column-display"
     :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
@@ -69,6 +72,9 @@
 <script>
 export default {
   name: "MathVisualizerProjectView",
+  created() {
+    scroll(0, 0);
+  },
 };
 </script>
 
@@ -92,5 +98,17 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 60%;
+}
+
+@media (max-width: 768px) {
+  .mv-screenshot {
+    width: 85%;
+    height: 47%;
+  }
+
+  .math-viz-text {
+    width: 85%;
+    padding: 10px;
+  }
 }
 </style>

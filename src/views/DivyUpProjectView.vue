@@ -5,6 +5,9 @@
   >
     divyUp
   </h1>
+  <div class="back-link">
+    <RouterLink to="/" class="back-link">Back</RouterLink>
+  </div>
   <div
     class="project column-display"
     :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
@@ -63,6 +66,9 @@
 <script>
 export default {
   name: "DivyUpProjectView",
+  created() {
+    scroll(0, 0);
+  },
 };
 </script>
 
@@ -82,5 +88,13 @@ export default {
   filter: brightness(70%);
   filter: grayscale(20%);
   filter: drop-shadow(0 0 1em #f8b400);
+}
+
+@media (max-width: 768px) {
+  .divy-screenshot {
+    margin: 10px;
+    width: 85%;
+    height: 45%;
+  }
 }
 </style>
