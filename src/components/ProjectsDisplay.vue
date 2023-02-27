@@ -381,13 +381,80 @@ export default {
   color: inherit;
 }
 
-/* .text-dark-theme {
-  transition: background-color 500ms, color 500ms;
-  box-shadow: 0 0 0 0;
-  border: none;
-  border: solid 2px #376767;
-  background-color: #1b1212;
-  text-shadow: 0 0 1px #faf9f6;
-  color: white;
-} */
+@media (max-width: 768px) {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .projects-title {
+    font-size: xx-large;
+  }
+
+  .project-title {
+    border-right: none;
+    border-left: none;
+    border-radius: 0 0 0 0;
+    width: 100%;
+    padding-left: 5px;
+  }
+
+  .snapshot-container {
+    width: 100%;
+  }
+
+  .project-snapshot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-synopsis {
+    margin: 1em 0 2em 0;
+    box-shadow: 0 0 0 0;
+    border: solid 2px #63b7b7;
+    border-right: none;
+    border-left: none;
+    border-radius: 0 0 0 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .exit-ticket-screenshot {
+    margin: 2em 2em 1em 2em;
+    width: 275px;
+    height: 293px;
+  }
+
+  .exit-ticket-screenshot-dark-theme:hover {
+    width: 295px;
+    height: 314px;
+  }
+
+  .math-viz-screenshot {
+    margin-bottom: 2em;
+    width: 275px;
+    height: 354px;
+  }
+
+  .math-viz-screenshot-dark-theme:hover {
+    width: 295px;
+    height: 379px;
+  }
+
+  .divy-up-screenshot {
+    width: 350px;
+    height: 168px;
+    padding: 1em;
+  }
+
+  .divy-up-screenshot-dark-theme:hover {
+    width: 370px;
+    height: 177px;
+  }
+}
 </style>

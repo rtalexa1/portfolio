@@ -45,6 +45,7 @@ export default {
 }
 
 body {
+  width: 100%;
   min-height: 100%;
   font-size: x-large;
   line-height: 1.5;

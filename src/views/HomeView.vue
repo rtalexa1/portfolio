@@ -43,4 +43,15 @@ export default {
 .section-break {
   height: 2em;
 }
+
+@media (max-width: 768px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-break {
+    height: 4em;
+  }
+}
 </style>

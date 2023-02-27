@@ -6,7 +6,7 @@
     >
       RT Alexander
     </h1>
-    <div class="placeholder"></div>
+    <div class="spacer"></div>
     <div class="toggle-buttons">
       <span v-if="!$store.state.darkThemeActive"
         >Dark theme
@@ -85,11 +85,6 @@ nav {
   }
 }
 
-.placeholder {
-  margin-left: 3em;
-  width: 30%;
-}
-
 .toggle-buttons {
   display: flex;
   justify-content: center;
@@ -129,6 +124,31 @@ nav {
 
   to {
     opacity: 100%;
+  }
+}
+
+.spacer {
+  margin-left: 3em;
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .name {
+    width: 70%;
+  }
+
+  .spacer {
+    width: 0%;
+  }
+
+  .toggle-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    width: 30%;
+    font-size: x-small;
   }
 }
 </style>
