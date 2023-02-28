@@ -146,7 +146,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 2em;
     width: 30%;
     font-size: x-small;
   }

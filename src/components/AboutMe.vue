@@ -98,13 +98,24 @@ export default {
 @media (max-width: 992px) {
   .about-me-container {
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-top: 3em;
     min-height: 25em;
   }
 
+  .about-me-pic {
+    clip-path: circle(50%);
+    width: 8.5em;
+    height: 8.5em;
+  }
+
   .photo-container {
     position: static;
-    margin: -2em;
+    margin-bottom: 10px;
+    border: none;
+    width: 9.5em;
+    height: 9.5em;
+    background-color: transparent;
   }
 
   .about-me-text {
