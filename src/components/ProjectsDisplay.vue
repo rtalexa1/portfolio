@@ -65,16 +65,54 @@
             :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
           >
             <p>
-              Much like software developers test their programs to make sure
-              they are working as expected, it is crucial for teachers to be
-              able to assess their students' learning to make sure that they are
-              mastering academic standards. I created this app to make it
-              quicker and easier for teachers to make simple assessments (known
-              as "exit tickets") that they can use with their students. Once
-              created, these exit tickets can be saved as a PDF or linked to a
-              teacher's Google Classroom. I wish something like this existed
-              when I was working in the classroom!
+              I created this app to make it quicker and easier for teachers to
+              make simple assessments (known as "exit tickets") that they can
+              use with their students. I wish something like this existed when I
+              was working in the classroom!
             </p>
+            <br />
+            <figure>
+              <figcaption>Technologies Used</figcaption>
+              <!-- Add icons (?) -->
+              <ul>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/vuejs.png"
+                      alt="Vue.js icon"
+                      class="tech-icon"
+                  /></span>
+                  Vue.js
+                </li>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/vuejs.png"
+                      alt="Vue.js icon"
+                      class="tech-icon"
+                  /></span>
+                  Vuex
+                </li>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/rubyonrails.png"
+                      alt="Ruby on Rails icon"
+                      class="tech-icon"
+                  /></span>
+                  Ruby on Rails
+                </li>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/firebase.png"
+                      alt="Firebase icon"
+                      class="tech-icon"
+                  /></span>
+                  Firebase Authentication
+                </li>
+              </ul>
+            </figure>
             <br />
             <RouterLink to="met" class="project-link"
               >Learn more about this project
@@ -128,6 +166,30 @@
               user through each of solving the problem, with hints provided
               along the way.
             </p>
+            <br />
+            <figure>
+              <figcaption>Technologies Used</figcaption>
+              <ul>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/vuejs.png"
+                      alt="Vue.js icon"
+                      class="tech-icon"
+                  /></span>
+                  Vue.js
+                </li>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/vuejs.png"
+                      alt="Vue.js icon"
+                      class="tech-icon"
+                  /></span>
+                  Vuex
+                </li>
+              </ul>
+            </figure>
             <br />
             <RouterLink to="math_visualizer" class="project-link"
               >Learn more about this project
@@ -190,6 +252,21 @@
               the mathematically challenged among us (points at self). While
               mostly fleshed out, this app is still in development.
             </p>
+            <br />
+            <figure>
+              <figcaption>Technologies Used</figcaption>
+              <ul>
+                <li>
+                  <span
+                    ><img
+                      src="../assets/images/icons/rubyonrails.png"
+                      alt="Ruby on Rails icon"
+                      class="tech-icon"
+                  /></span>
+                  Ruby on Rails
+                </li>
+              </ul>
+            </figure>
             <br />
             <RouterLink to="divy_up" class="project-link"
               >Learn more about this project
