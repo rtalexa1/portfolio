@@ -18,10 +18,11 @@
     >
       <p>
         <strong>Hello!</strong> My name is RT, and I love to create intuitive,
-        useful websites that make things easier for users. I am not only an avid
-        learner, but also a teacher, and my ultimate goal is hone my craft to
-        the point that I can serve as a mentor to aspiring web developers. Thank
-        you for taking the time to check out my work!
+        useful web apps that make life easier for users. I cut my teeth making
+        CLI games with Ruby, but most recently I have been having a lot of fun
+        building UIs with Vue. My ultimate goal is to reach a point where I can
+        serve as a mentor to other developers. Thank you for taking the time to
+        check out my work!
       </p>
     </div>
   </div>
