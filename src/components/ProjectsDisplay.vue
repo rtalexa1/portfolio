@@ -11,9 +11,14 @@
       class="project-title"
       :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
     >
-      <h2 :class="{ 'title-dark-theme': $store.state.darkThemeActive }">
+      <a
+        href="https://math-exit-ticket.vercel.app/#/"
+        target="_blank"
+        class="title-link"
+        :class="{ 'title-dark-theme': $store.state.darkThemeActive }"
+      >
         Math Exit Ticket (MET)
-      </h2>
+      </a>
       <a
         href="https://math-exit-ticket.vercel.app/#/"
         target="_blank"
@@ -126,9 +131,13 @@
       class="project-title"
       :class="{ 'text-dark-theme': $store.state.darkThemeActive }"
     >
-      <h2 :class="{ 'title-dark-theme': $store.state.darkThemeActive }">
-        Math Visualizer
-      </h2>
+      <a
+        href="https://math-visualizer.vercel.app/#/"
+        target="_blank"
+        class="title-link"
+        :class="{ 'title-dark-theme': $store.state.darkThemeActive }"
+        >Math Visualizer</a
+      >
       <a
         href="https://math-visualizer.vercel.app/#/"
         target="_blank"
@@ -334,6 +343,11 @@ export default {
 
 .title-dark-theme {
   filter: drop-shadow(0 0 2px #faf9f6);
+}
+
+.title-link {
+  color: #faf9f6;
+  font-size: 1.5em;
 }
 
 .icon-link {
