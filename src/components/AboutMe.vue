@@ -6,7 +6,7 @@
       id="photo-container"
     >
       <img
-        src="../assets/images/web_Richard Alexander_r1_5762.png"
+        src="../assets/images/web_Richard_Alexander_r1_5762.png"
         alt="RT picture"
         class="about-me-pic"
       />
